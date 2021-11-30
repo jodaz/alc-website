@@ -59,34 +59,5 @@
                 </div>
             </div>
         </div>
-    @else
-        <div class="kt-portlet kt-portlet--height-fluid">
-            <div class="kt-portlet__head bg-info">
-                <div class="kt-portlet__head-label">
-                    <h3 class="kt-portlet__head-title">
-                        Notificaciones
-                    </h3>
-                </div>
-            </div>
-            <div class="kt-portlet__body">
-                <div class="kt-timeline-v2">
-                    <div class="kt-timeline-v2__items  kt-padding-top-25 kt-padding-bottom-30">
-                        @forelse ($notifications as $element)
-                            <div class="kt-timeline-v2__item">
-                                <span class="kt-timeline-v2__item-time">{{ $element->created_at->format('H:i') }}</span>
-                                <div class="kt-timeline-v2__item-cricle">
-                                    <i class="fa fa-genderless kt-font-danger"></i>
-                                </div>
-                                <div class="kt-timeline-v2__item-text  kt-padding-top-5">
-                                    <strong>{{ $element->created_at->format('M d, Y') }}.</strong> {{ $element->description }}
-                                </div>
-                            </div>
-                        @empty
-                            Sin notificaciones
-                        @endforelse
-                    </div>
-                </div>
-            </div>
-        </div>
     @endrole
 @endsection

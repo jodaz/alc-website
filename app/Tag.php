@@ -8,23 +8,29 @@ use Cviebrock\EloquentSluggable\Sluggable;
 class Tag extends Model
 {
     use Sluggable;
+
     protected $table = "tags";
+
     protected $fillable = [
         'name',
         'slug'
     ];
 
-    public function sluggable()
+    /**
+     * Return the sluggable configuration array for this model.
+     *
+     * @return array
+     */
+    public function sluggable(): array
     {
-    	return [
-    		'slug'	=>	[
-    			'source'	=>	'name',
-    			'onUpdate'	=>	true
-    		]
-    	];
+        return [
+            'slug' => [
+                'source' => 'name'
+            ]
+        ];
     }
 
-    public function post()
+    public function posts()
     {
         return $this->belongsToMany(Post::class);
     }

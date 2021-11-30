@@ -21,14 +21,18 @@ class User extends Authenticatable
         'name', 'surname', 'slug', 'avatar', 'email', 'password', 'status',
     ];
 
-    public function sluggable()
+    /**
+     * Return the sluggable configuration array for this model.
+     *
+     * @return array
+     */
+    public function sluggable(): array
     {
-    	return [
-    		'slug'	=>	[
-    			'source'	=>	'email',
-    			'onUpdate'	=>	true
-    		]
-    	];
+        return [
+            'slug' => [
+                'source' => 'email'
+            ]
+        ];
     }
 
     /**
