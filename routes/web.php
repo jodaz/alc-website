@@ -15,8 +15,7 @@ use Spatie\Sitemap\SitemapGenerator;
 
 Route::get('stmap', function() {
 
-	SitemapGenerator::create('http://somoscarupano.com.ve')->writeToFile('sitemap.xml');
-
+	SitemapGenerator::create(config('app.url'))->writeToFile('sitemap.xml');
 	return 'Sitemap created';
 });
 
