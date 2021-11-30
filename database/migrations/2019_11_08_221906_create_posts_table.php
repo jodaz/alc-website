@@ -22,6 +22,7 @@ class CreatePostsTable extends Migration
             $table->text('post');
             $table->string('slug');
             $table->string('image');
+            $table->string('youtube_video')->nullable();
             $table->string('status');
             $table->timestamps();
 
