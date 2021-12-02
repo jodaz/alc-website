@@ -67,43 +67,37 @@ class PostController extends Controller
      */
     public function store(PostCreateFormRequest $request)
     {
-        //dd($request->all());
-         /** */
         $file = $request->image;
-        /** */
-        $create                 = new Post();
-        $create->user_id        = Auth::user()->id;
-        $create->title          = $request->input('title');
-        $create->description    = $request->input('description');
-        $create->post           = $request->input('post');
-        $create->slug           = SlugService::createSlug(Post::class, 'slug', $request->input('title'));
-        $create->image          = $create->slug.'.'.$file->extension();
-        $create->status         = $request->input('status');
+        $slug = SlugService::createSlug(Post::class, 'slug', $request->title);
 
-        if($create->save()) {
-            /* Register tags */
-            $create->tags()->sync($request->get('tag_id'));
-            /**
-            *
-            **/
-            $path = public_path('/uploads/posts/');
-            if (!File::exists($path)) {
-                File::makeDirectory($path, 0775, true, true);
-            }
-            /**
-            *
-            **/
-            $file->move(public_path().'/uploads/posts/', $create->image);
+        $post = Post::create([
+            'user_id' => Auth::user()->id,
+            'title' => $request->title,
+            'post' => $request->post,
+            'slug' => $slug,
+            'status' => $request->status,
+            'image' => $slug.'.'.$file->extension(),
+            'description' => $request->description
+        ]);
 
-            //Resize image here
-            $thumbnailpath = public_path('uploads/posts/'.$create->image);
-            $img = Image::make($thumbnailpath)->resize(800, 600, function($constraint) {
-                $constraint->aspectRatio();
-            });
-            $img->save($thumbnailpath);
+        // Save tags
+        $post->tags()->sync($request->get('tag_id'));
 
-            return redirect($this->options['route'].'/'.$create->id)->withSuccess('Registro exitoso!!');
+        // Save file
+        $path = public_path('/uploads/posts/');
+        if (!File::exists($path)) {
+            File::makeDirectory($path, 0775, true, true);
         }
+        $file->move(public_path().'/uploads/posts/', $post->image);
+
+        // Resize image here
+        $thumbnailpath = public_path('uploads/posts/'.$post->image);
+        $img = Image::make($thumbnailpath)->resize(800, 600, function($constraint) {
+            $constraint->aspectRatio();
+        });
+        $img->save($thumbnailpath);
+
+        return redirect($this->options['route'].'/'.$post->id)->withSuccess('Registro exitoso!!');
     }
 
     /**
