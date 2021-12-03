@@ -70,6 +70,19 @@ class PostController extends Controller
         $file = $request->image;
         $slug = SlugService::createSlug(Post::class, 'slug', $request->title);
 
+        $url = $request->youtube_video;
+        parse_str(parse_url($url, PHP_URL_QUERY), $vars);
+
+        if (empty($vars)) {
+            return back()
+                ->withInput()
+                ->withErrors([
+                    'youtube_video' => 'El link ingresado no es válido'
+                ]);
+        }
+
+        $youtubeId = $vars['v'];
+
         $post = Post::create([
             'user_id' => Auth::user()->id,
             'title' => $request->title,
@@ -77,7 +90,8 @@ class PostController extends Controller
             'slug' => $slug,
             'status' => $request->status,
             'image' => $slug.'.'.$file->extension(),
-            'description' => $request->description
+            'description' => $request->description,
+            'youtube_video' => $youtubeId
         ]);
 
         // Save tags
@@ -97,7 +111,8 @@ class PostController extends Controller
         });
         $img->save($thumbnailpath);
 
-        return redirect($this->options['route'].'/'.$post->id)->withSuccess('Registro exitoso!!');
+        return redirect($this->options['route'].'/'.$post->id)
+            ->withSuccess('¡Ha registrado un nuevo artículo!');
     }
 
     /**
