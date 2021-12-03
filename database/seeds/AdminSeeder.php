@@ -16,8 +16,8 @@ class AdminSeeder extends Seeder
     public function run()
     {
         $admin = User::create([
-            'name' => config('installation.admin_full_name'),
-            'surname' => config('installation.admin_full_name'),
+            'name' => 'admin',
+            'surname' => 'admin',
             'avatar' => 'default/user.png',
             'password' => bcrypt(config('installation.admin_password')),
             'email' => config('installation.admin_email'),
