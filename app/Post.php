@@ -20,7 +20,8 @@ class Post extends Model implements Viewable
         'post',
         'slug',
         'image',
-        'status'
+        'status',
+        'youtube_video'
     ];
 
     /**
