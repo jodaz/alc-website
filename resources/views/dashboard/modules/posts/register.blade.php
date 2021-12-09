@@ -31,7 +31,7 @@
         <div class="card-body">
             <div class="form-group row">
 				<div class="col-lg-6">
-					<label>Título <span class="text-danger">*</span></label>
+				  <label>Título <span class="text-danger">*</span></label>
                     {!! Form::textarea("title", old('title', @$row->title), ["placeholder" => "Título", "class" => "form-control", "size" => "3x2", "id" => "accountant", "onpaste" => "charaterCounter();", "onkeyup" => "charaterCounter();"]) !!}
                     <span class="form-text text-muted" id="res">0 caractere/s</span>
 
@@ -105,7 +105,21 @@
                     @enderror
                 </div>
             </div>
+            <div class="form-group row">
+              <div class="col-lg-12">
+                <label>Dirección a vídeo de Youtube</label>
+                  {!! Form::text("youtube_video", old('youtube_video', @$row->youtube_video), [
+                      "placeholder" => "https://www.youtube.com/watch?v=USDX0X-d588",
+                      "class" => "form-control", "size" => "3x2",
+                      "id" => "accountant"
+                    ])
+                  !!}
 
+                  @error('youtube_video')
+                      <div class="text text-danger">{{ $message }}</div>
+                  @enderror
+              </div>
+            </div>
             <div class="form-group row">
                 <div class="col-lg-6">
                     <label>Imagen <span class="text-danger">*</span></label>
