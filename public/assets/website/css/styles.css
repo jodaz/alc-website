@@ -231,6 +231,12 @@ h1, h2 {
     .img-article {
         width: 100%;
     }
+    .video-article {
+        width: 100%;
+        margin-top:10px;
+        border:#bfbfbf 5px solid;
+       
+    }
     .col-details h4 {
         font-family: Delius;
     }

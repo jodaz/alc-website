@@ -5,6 +5,13 @@ import AOS from 'aos/dist/aos.js';
 import 'owl.carousel';
 import 'jquery.easing/jquery.easing.js';
 
+const button = document.getElementById('navbarButton');
+const menu = document.getElementById('navbarResponsive');
+
+button.addEventListener('click', function() {
+  menu.classList.toggle('toggle')
+});
+
 (function($) {
 "use strict"; // Start of use strict
 
