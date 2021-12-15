@@ -1,16 +1,16 @@
 @font-face {
-  font-family: "Quicksand";
-  src: url("fonts/Quicksand/Quicksand-Bold.ttf");
+  font-family: "Lato";
+  src: url("fonts/Lato/Lato-Bold.ttf");
   font-display: 'swap'
 }
 @font-face {
-  font-family: "QuicksandR";
-  src: url("fonts/Quicksand/Quicksand-Regular.ttf");
+  font-family: "LatoR";
+  src: url("fonts/Lato/Lato-Regular.ttf");
   font-display: 'swap'
 }
 @font-face {
-  font-family: "QuicksandL";
-  src: url("fonts/Quicksand/Quicksand-Light.ttf");
+  font-family: "LatoL";
+  src: url("fonts/Lato/Lato-Light.ttf");
   font-display: 'swap'
 }
 @font-face {
@@ -65,10 +65,10 @@
 }
 body {
     overflow-x: hidden;
-    font-family: QuicksandR;
+    font-family: LatoR;
 }
 h1, h2 {
-    font-family: Delius;
+    font-family: Lato;
 }
 .row {
     margin-right: 0;
@@ -185,7 +185,7 @@ h1, h2 {
         height: 6rem;
     }
     .news h4 {
-        font-family: Delius;
+        font-family: Lato;
     }
     .col-post {
         padding-bottom: .80rem;
@@ -220,7 +220,7 @@ h1, h2 {
     }
     .post span {
         margin-top: 1rem;
-        font-family: QuicksandL;
+        font-family: LatoL;
     }
     .row-tags {
         margin-bottom: 1rem;
@@ -238,7 +238,7 @@ h1, h2 {
        
     }
     .col-details h4 {
-        font-family: Delius;
+        font-family: Lato;
     }
     .nav-social, .categories, .last-articles {
         margin-bottom: 2rem;
@@ -373,7 +373,7 @@ h1, h2 {
         width: 40%;
     }
     .card h5 {
-        font-family: Quicksand;
+        font-family: Lato;
     }
     .card p {
         color: #BB6143;
@@ -413,7 +413,7 @@ h1, h2 {
     }
     .footer h3 {
         margin-top: 1rem;
-        font-family: Quicksand;
+        font-family: Lato;
     }
     .footer-contact img {
         width: 8%;
@@ -421,7 +421,7 @@ h1, h2 {
     .footer-contact {
         margin-top: .8rem;
         padding-left: .8rem;
-        font-family: QuicksandL;
+        font-family: LatoL;
     }
     .footer-site {
         margin-top: .8rem;
@@ -429,7 +429,7 @@ h1, h2 {
     }
     .footer-site a {
         color: #ffffff;
-        font-family: QuicksandL;
+        font-family: LatoL;
         padding-left: .8rem;
     }
     .footer-social {
@@ -693,7 +693,7 @@ h1, h2 {
             padding-bottom: 15px;
         }
         .card h5 {
-            font-family: Quicksand;
+            font-family: Lato;
         }
         .card img {
             width: 70%;
