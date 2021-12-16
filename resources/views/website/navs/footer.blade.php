@@ -1,7 +1,7 @@
 <div class="footer">
   <div class="row footer-content">
     <div class="col-md-3 col-12" style="text-align:center;">
-      <img class="img-fluid logo-footer" src="{{ asset('website/images/logo.webp') }}" alt="Alcaldia de Bermudez">
+      <img class="img-fluid logo-footer" src="{{ asset('website/images/logo.png') }}" alt="Alcaldia de Bermudez">
     </div>
     <div class="col-md-3 col-12">
       <div class="footer-site">
