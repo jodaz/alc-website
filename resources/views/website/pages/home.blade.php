@@ -22,7 +22,7 @@
                                 <a href="{{ url('noticias/'.$post->slug) }}">
                                     <div class="card item-slider-blog">
                                         <div class="card-body text-center">
-                                            <img src="{{ asset('uploads/posts/'.$post->image) }}" style="width:300px; height:300px;" alt="{{ $post->title }}" title="{{ $post->title }}">
+                                            <img src="{{ asset('uploads/posts/'.$post->image) }}" style="width:100%; height:300px;" alt="{{ $post->title }}" title="{{ $post->title }}">
                                             <h5 class="card-title">{{ $post->title }}</h5>
                                             <p>{{ $post->created_at->toFormattedDateString() }}</p>
                                         </div>
