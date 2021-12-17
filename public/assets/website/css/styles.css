@@ -46,6 +46,9 @@
         background-color: rgba(84, 114, 114, 0.2);
         z-index: 0;
     }
+.container {
+    padding-top: 1rem;
+}
 .article b {
     font-weight: bold;
 }
@@ -256,9 +259,6 @@ h1, h2 {
         font-size: 1.3em;
         font-weight: bold;
     }
-    .row-directions img {
-        margin-bottom: 3rem;
-    }
     .card {
         border: 1px solid rgba(119,119,119,.325);
         /*height: 23rem;*/
@@ -300,9 +300,6 @@ h1, h2 {
     }
 }
 @media screen and (min-width: 640px) {
-  .title-video {
-      height: 10rem;
-  }
   .news {
       margin-top: 1.5rem;
   }
