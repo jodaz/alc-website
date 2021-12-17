@@ -1,4 +1,4 @@
-@extends('website.layouts.template')
+@extends('website.layout.template')
 
 @section('title', $query->title)
 
@@ -16,7 +16,7 @@
                 </div>
                 <div class="row">
                     <div class="col-12">
-                        
+
                         <img class="img-article" src="{{ asset('uploads/posts/'.$query->image) }}" alt="{{ $query->title }}">
                         @if($query->youtube_video)
                         <iframe class="video-article" width="560" height="315" src="https://www.youtube.com/embed/{{$query->youtube_video}}"  allowfullscreen></iframe>
