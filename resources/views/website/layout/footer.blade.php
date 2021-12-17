@@ -14,15 +14,15 @@
             <div class="social-links">
                 <h4>Síguenos</h4>
                 <a href="https://www.facebook.com/alcbermudez" target="_blank">
-                    <img src="{{ asset('icons/facebook.svg') }}" class="icon icon-facebook"></img>
+                    <img src="{{ asset('icons/facebook.svg') }}" style="border-radius:50%;" class="icon icon-facebook"></img>
                     Facebook
                 </a>
                 <a href="https://twitter.com/AlcBermudez_" target="_blank">
-                    <img src="{{ asset('icons/twitter.svg') }}" class="icon icon-twitter"></img>
+                    <img src="{{ asset('icons/twitter.svg') }}" style="border-radius:50%;" class="icon icon-twitter"></img>
                     Twitter
                 </a>
                 <a href="https://www.instagram.com/alcaldiadebermudez1" target="_blank">
-                    <img src="{{ asset('icons/instagram.svg') }}" class="icon icon-instagram"></img>
+                    <img src="{{ asset('icons/instagram.svg') }}" style="border-radius:50%;" class="icon icon-instagram"></img>
                     Instagram
                 </a>
             </div>

@@ -16,7 +16,7 @@
                     <div class="col-12">
                         <img class="img-article" src="{{ asset('uploads/posts/'.$query->image) }}" alt="{{ $query->title }}">
                         @if($query->youtube_video)
-                        <iframe class="video-article" width="560" height="315" src="https://www.youtube.com/embed/{{$query->youtube_video}}"  allowfullscreen></iframe>
+                        <iframe class="video-article" width="100%" height="315" src="https://www.youtube.com/embed/{{$query->youtube_video}}"  allowfullscreen></iframe>
                         @endif
                         <div class="post">{!! $query->post !!}</div>
                         <div class="flex flex-row mx-auto text-right row-tags">
