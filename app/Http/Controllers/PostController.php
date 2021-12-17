@@ -73,15 +73,17 @@ class PostController extends Controller
         $url = $request->youtube_video;
         parse_str(parse_url($url, PHP_URL_QUERY), $vars);
 
-        if (empty($vars)) {
+        $youtubeId = '';
+
+        if (empty($vars) && $url != null) {
             return back()
                 ->withInput()
                 ->withErrors([
                     'youtube_video' => 'El link ingresado no es válido'
                 ]);
+        } elseif (!empty($vars)) {
+            $youtubeId = $vars['v'];
         }
-
-        $youtubeId = $vars['v'];
 
         $post = Post::create([
             'user_id' => Auth::user()->id,
