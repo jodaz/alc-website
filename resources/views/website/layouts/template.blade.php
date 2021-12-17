@@ -33,10 +33,6 @@
 </head>
 
 <body id="page-top">
-  <div class="loader">
-    <div class="loaderr"></div>
-  </div>
-
   @include('website/partials/home')
 
     @include('website/navs/nav')
