@@ -15,22 +15,24 @@
     <div class="row slider-blog">
         <div class="col-12">
             <div class="container">
-                <div id="slider-blog" class="owl-carousel owl-theme">
-                    @forelse ($queryPost as $post)
-                        <div class="item-slider-blog">
-                            <a href="{{ url('noticias/'.$post->slug) }}">
-                                <div class="card item-slider-blog">
-                                    <div class="card-body text-center">
-                                        <img src="{{ asset('uploads/posts/'.$post->image) }}" alt="{{ $post->title }}" title="{{ $post->title }}">
-                                        <h5 class="card-title">{{ $post->title }}</h5>
-                                        <p>{{ $post->created_at->toFormattedDateString() }}</p>
+                <div id="slider-blog">
+                    <div  class="owl-carousel owl-theme">
+                        @forelse ($queryPost as $post)
+                            <div class="item-slider-blog">
+                                <a href="{{ url('noticias/'.$post->slug) }}">
+                                    <div class="card item-slider-blog">
+                                        <div class="card-body text-center">
+                                            <img src="{{ asset('uploads/posts/'.$post->image) }}" alt="{{ $post->title }}" title="{{ $post->title }}">
+                                            <h5 class="card-title">{{ $post->title }}</h5>
+                                            <p>{{ $post->created_at->toFormattedDateString() }}</p>
+                                        </div>
                                     </div>
-                                </div>
-                            </a>
-                        </div>
-                    @empty
-                        {{-- empty expr --}}
-                    @endforelse
+                                </a>
+                            </div>
+                        @empty
+                            {{-- empty expr --}}
+                        @endforelse
+                    </div>
                 </div>
             </div>
         </div>

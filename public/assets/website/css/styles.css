@@ -108,6 +108,9 @@ h1, h2 {
     -ms-flex-align: center;
     align-items: center;
 }
+.slider-blog {
+    height: 35rem;
+}
 .items img {
     min-width: 50px;
 }
@@ -228,9 +231,6 @@ h1, h2 {
     }
     .navbar-collapse {
         border-radius: 12px;
-    }
-    .slider-blog {
-        height: 30rem;
     }
     .item-slider-blog img {
         width: 100%;
@@ -359,7 +359,6 @@ h1, h2 {
     }
     .slider-blog {
         margin-top: 2rem;
-        height: 29rem;
     }
     .item-slider-blog img {
         width: 40%;
