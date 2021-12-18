@@ -7,7 +7,7 @@
 <section class="container home-blog" id="actualidad">
     <div class="row">
         <div class="col-12 text-center">
-            <h1>
+            <h1 class="container--title">
                 Actualidad
             </h1>
         </div>

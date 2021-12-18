@@ -8,15 +8,12 @@
             <div class="col-12 col-md-8 col-article">
                 <div class="row">
                     <div class="col-12">
-                        <h2>{{ $query->title }}</h2>
-                        <img class="icon-calendar" src="{{ asset('assets/website/images/calendar.webp') }}" alt="">
-                        <span style="font-weight: bold; margin-top: 2rem; color: #BB6143;">Publicado: {{ $query->created_at->toFormattedDateString() }} {{--|| {{ $count }} visita(s)--}} </span>
-                        <hr>
+                        <h2 class="container--title">{{ $query->title }}</h2>
+                        <p class="container--title">Publicado: {{ $query->created_at->toFormattedDateString() }}</p>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-12">
-
                         <img class="img-article" src="{{ asset('uploads/posts/'.$query->image) }}" alt="{{ $query->title }}">
                         @if($query->youtube_video)
                         <iframe class="video-article" width="560" height="315" src="https://www.youtube.com/embed/{{$query->youtube_video}}"  allowfullscreen></iframe>

@@ -16,15 +16,15 @@
         <div class="row">
           @foreach ($query as $article)
             <div class="col-12 col-md-4 item-news text-center">
-              <div class="card">
-                <div class="card-body news-card">
-                  <img src="{{ asset('uploads/posts/'.$article->image) }}" alt="{{ $article->title }}" title="{{ $article->title }}">
-                  <h5 class="card-title">{{ $article->title }}</h5>
-                  <p>{{ $article->created_at->toFormattedDateString() }}</p>
-
-                  <a href="{{ url('noticias/'.$article->slug) }}" class="btn btn-post">Leer</a>
-                </div>
-              </div>
+                <a href="{{ url('noticias/'.$article->slug) }}">
+                    <div class="card item-slider-blog">
+                        <div class="card-body text-center">
+                            <img src="{{ asset('uploads/posts/'.$article->image) }}" alt="{{ $article->title }}" title="{{ $article->title }}">
+                            <h5 class="card-title">{{ $article->title }}</h5>
+                            <p>{{ $article->created_at->toFormattedDateString() }}</p>
+                        </div>
+                    </div>
+                </a>
             </div>
           @endforeach
         </div>

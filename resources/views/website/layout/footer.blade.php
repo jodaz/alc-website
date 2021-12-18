@@ -5,9 +5,6 @@
         </div>
         <div class="col-md-4 col-12">
             <div class="internal-links">
-                <a href="{{ url('/#actualidad') }}" title="Actualidad">
-                    Actualidad
-                </a>
                 <a href="{{ route('news') }}" title="Noticias">
                     Noticias
                 </a>

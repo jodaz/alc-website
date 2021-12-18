@@ -61,11 +61,19 @@ a {
         z-index: 0;
     }
 .container {
-    padding-top: 2rem;
+    padding-top: 4rem;
     padding-bottom: 2rem;
 }
+    .container--title {
+        text-transform: uppercase;
+    }
 .article b {
     font-weight: bold;
+}
+.img-article {
+    width: 100%;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
 }
 body {
     overflow-x: hidden;
@@ -122,6 +130,7 @@ h1, h2 {
         text-decoration: none;
         color: #bfbfbf;
         margin: 0.5em 0;
+        font-family: LatoL;
     }
     .icon {
         color: white;
@@ -197,12 +206,6 @@ h1, h2 {
     }
     .row-tags {
         margin-bottom: 1rem;
-    }
-    .icon-calendar {
-        width: 20%;
-    }
-    .img-article {
-        width: 100%;
     }
     .col-details h4 {
         font-family: Lato;

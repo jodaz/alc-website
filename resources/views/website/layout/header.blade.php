@@ -7,10 +7,7 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="{{ url('/#inicio') }}" style="color: #FFFFFF;" title="Inicio">inicio</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="{{ url('/#actualidad') }}" style="color: #FFFFFF;" title="Actualidad">actualidad</a>
+                    <a class="nav-link js-scroll-trigger" href="{{ route('home') }}" style="color: #FFFFFF;" title="Inicio">inicio</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link js-scroll-trigger" href="{{ route('news') }}" style="color: #FFFFFF;" title="Noticias">Noticias</a>
