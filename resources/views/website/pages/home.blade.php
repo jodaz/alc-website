@@ -4,7 +4,7 @@
 
 @section('content')
 
-<section class="home-blog" id="actualidad">
+<section class="container home-blog" id="actualidad">
     <div class="row">
         <div class="col-12 text-center">
             <h1>
@@ -18,15 +18,15 @@
                 <div id="slider-blog" class="owl-carousel owl-theme">
                     @forelse ($queryPost as $post)
                         <div class="item-slider-blog">
-                            <div class="card item-slider-blog">
-                                <div class="card-body text-center">
-                                    <img src="{{ asset('uploads/posts/'.$post->image) }}" alt="{{ $post->title }}" title="{{ $post->title }}">
-                                    <h5 class="card-title">{{ $post->title }}</h5>
-                                    <p>{{ $post->created_at->toFormattedDateString() }}</p>
-
-                                    <a href="{{ url('noticias/'.$post->slug) }}" class="btn btn-post">Leer</a>
+                            <a href="{{ url('noticias/'.$post->slug) }}">
+                                <div class="card item-slider-blog">
+                                    <div class="card-body text-center">
+                                        <img src="{{ asset('uploads/posts/'.$post->image) }}" alt="{{ $post->title }}" title="{{ $post->title }}">
+                                        <h5 class="card-title">{{ $post->title }}</h5>
+                                        <p>{{ $post->created_at->toFormattedDateString() }}</p>
+                                    </div>
                                 </div>
-                            </div>
+                            </a>
                         </div>
                     @empty
                         {{-- empty expr --}}
@@ -35,7 +35,7 @@
             </div>
         </div>
     </div>
-    <div class="row url">
+    <div class="container">
         <div class="col-12 text-center">
             <a class="btn link-btn" href="{{ url('noticias') }}">
                 <span>
