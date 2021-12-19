@@ -1,12 +1,5 @@
 <div class="container footer">
-    <marquee style="width:100%; margin:0px; padding:0px"  scrolldelay="100" scrollamout="2" bgcolor="#FFF" direction="left">
-            <p style="text-align: center; font-family:arial;font-weight:bold; font-size: 20px;color:#1b4468;"> VES(1 Petro): 258,94 |LTC: 0,36643911 | EURO: 49,92 | CNY: 357,96| RUB: 4.160,16 | USD: 56,21| BTC: 0,00116165</p>
-    </marquee>
-        
     <div class="row footer-content">
-
-        
-
         <div class="col-md-4 col-12" style="text-align:center;">
             <img class="img-fluid logo-footer" src="{{ asset('website/images/logo.png') }}" alt="Alcaldia de Bermudez">
         </div>

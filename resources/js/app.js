@@ -7,35 +7,24 @@ import 'jquery.easing/jquery.easing.js';
 
 const button = document.getElementById('navbarButton');
 const menu = document.getElementById('navbarResponsive');
+const navbar = document.getElementById('header');
 
 button.addEventListener('click', function() {
   menu.classList.toggle('toggle')
 });
 
+window.onscroll = function() {
+  "use strict";
+  if (document.documentElement.scrollTop >= window.innerHeight * 0.75  ||
+      document.body.scrollTop >= window.innerHeight * 0.75 ) {
+    navbar.classList.add('header--scroll');
+  } else {
+    navbar.classList.remove('header--scroll');
+  }
+}
+
 (function($) {
 "use strict"; // Start of use strict
-
-// Smooth scrolling using jQuery easing
-$('a.js-scroll-trigger[href*="#"]:not([href="#"])').click(function() {
-  if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
-    var target = $(this.hash);
-    target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-    if (target.length) {
-      $('html, body').animate({
-        scrollTop: (target.offset().top - 56)
-      }, 1000, "easeInOutExpo");
-      return false;
-    }
-  }
-});
-
-/**
- * Custom scripts
- */
-// Closes responsive menu when a scroll trigger link is clicked
-$('.js-scroll-trigger').click(function() {
-  $('.navbar-collapse').collapse('hide');
-});
 
 $(document).ready(function(){
   $('.owl-carousel').owlCarousel({
@@ -59,12 +48,6 @@ $(document).ready(function(){
     }
   });
 });
-
-// Activate scrollspy to add active class to navbar items on scroll
-// $('body').scrollspy({
-//   target: '#mainNav',
-//   offset: 56
-// });
 
 })(jQuery); // End of use strict
 
@@ -101,8 +84,3 @@ $(document).ready(function () {
 });
 
 AOS.init({ duration: 2000 });
-
-window.addEventListener("load", function () {
-  const loader = document.querySelector(".loader");
-  loader.className += " hidden"; // class "loader hidden"
-});

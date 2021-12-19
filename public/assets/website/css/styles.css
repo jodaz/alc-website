@@ -20,6 +20,12 @@
     }
 }
 
+:root {
+    --dark-primary-color: #00363a;
+    --light-primary-color: gray;
+    --text: rgb(238, 238, 238);
+}
+
 /**
 * OVERRIDES
 */
@@ -35,8 +41,8 @@ a {
     background-position: center;
     background-size: cover;
     background-attachment: scroll;
-    background-color: gray;
-    color: rgb(238, 238, 238);
+    background-color: var(--light-primary-color);
+    color: var(--text);
 }
     .home-intro {
         margin: auto;
@@ -87,13 +93,13 @@ h1, h2 {
     margin-left: 0;
 }
 .link-btn {
-    background-color: #2d4b09;
-    color: #ffffff !important;
+    background-color: var(--dark-primary-color);
+    color: var(--text)fff !important;
     font-weight: 700;
 }
 .row-title {
-    background-color: #2d4b09;
-    color: #ffffff;
+    background-color: var(--dark-primary-color);
+    color: var(--text);
 }
 .items {
     margin-bottom: 1rem;
@@ -161,6 +167,11 @@ h1, h2 {
     .internal-links > a {
         padding-bottom: 0.5rem;
     }
+.navbar--scroll {
+    background-color: var(--dark-primary-color);
+    -webkit-box-shadow: 0px 2px 4px rgba(0, 0, 0, .5);
+                box-shadow: 0px 2px 4px rgba(0, 0, 0, .5);
+}
 
 @media screen and (min-width: 320px) {
     header {
@@ -221,8 +232,10 @@ h1, h2 {
         padding: .50rem;
     }
     .navbar {
-        background: #2d4b09;
+        background-color: var(--dark-primary-color);
+        box-shadow: unset;
         padding: .2rem;
+        color: var(--text);
     }
     .nav-item {
         padding-left: .80rem;
@@ -266,12 +279,12 @@ h1, h2 {
     }
     .title-col {
         background-color: rgba(39, 38, 38, 0.5);
-        color: #ffffff;
+        color: var(--text);
         padding: .50rem;
         border-radius: 5px;
     }
     .title-col a {
-        color: #ffffff;
+        color: var(--text);
         font-size: 1.3em;
         font-weight: bold;
     }
@@ -290,18 +303,17 @@ h1, h2 {
                 text-decoration: underline;
             }
     .footer {
-        background-color: #2d4b09;
-        color: #ffffff;
+        background-color: var(--dark-primary-color);
+        color: var(--text);
         text-transform: uppercase;
         font-size: .8rem;
         padding-top: 1rem;
         font-size: 1rem;
         max-width: 100%;
-        margin-top: 2rem;
     }
     .footer a {
         font-family: 1rem;
-        color: #ffffff;
+        color: var(--text);
     }
     .logo-footer {
         width: 50%;
@@ -347,9 +359,9 @@ h1, h2 {
         width: 28%;
     }
     .navbar {
+        background-color: transparent;
         padding: .3rem;
-        color: #fff;
-        background-color: #2d4b09;
+        color: var(--text);
     }
     .navbar-nav {
         margin-right: auto;

@@ -1,4 +1,4 @@
-<header style="">
+<header style="header">
     <nav class="navbar navbar-expand-md navbar-light fixed-top">
         <button id="navbarButton" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
