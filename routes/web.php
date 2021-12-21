@@ -23,6 +23,10 @@ Route::get('/', 'HomeController@index')->name('home');
 Route::get('/noticias', 'NewsController@index')->name('news');
 Route::get('/noticias/{slug}', 'NewsController@show')->name('news.show');
 
+Route::get('/historia', 'PaginaEstaticaController@historia')->name('estaticas.historia');
+Route::get('/ubicacion', 'PaginaEstaticaController@ubicacion')->name('estaticas.ubicacion');
+
+
 Auth::routes([
   'register' => false,
   'verify' => true,
