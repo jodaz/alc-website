@@ -33,7 +33,7 @@ a {
     color: unset !important;
 }
 
-.home {
+.hero {
     display: flex;
     position: relative;
     height: 100vh;
@@ -44,19 +44,7 @@ a {
     background-color: var(--light-primary-color);
     color: var(--text);
 }
-    .home-intro {
-        margin: auto;
-        z-index: 2;
-        padding: 1.3rem;
-        text-align: left;
-    }
-    .home-title {
-        text-transform: uppercase;
-        font-weight: 700;
-        letter-spacing: 0.5px;
-        word-spacing: 5px;
-    }
-    .home::before {
+    .hero::before {
         content: "";
         position: absolute;
         top: 0;
@@ -66,9 +54,31 @@ a {
         background-color: rgba(84, 114, 114, 0.4);
         z-index: 0;
     }
+    .hero-intro {
+        margin: auto;
+        z-index: 2;
+        padding: 1.3rem;
+        text-align: left;
+    }
+        .hero-title {
+            text-transform: uppercase;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            word-spacing: 5px;
+        }
+        .intro {
+            z-index: 2;
+            padding: 2rem;
+            text-align: left;
+            width: 100%;
+        }
+    .hero-2 {
+        flex-direction: column;
+    }
 .container {
     padding-top: 4rem;
     padding-bottom: 2rem;
+    width: 100%;
 }
     .container--title {
         text-transform: uppercase;
@@ -94,7 +104,7 @@ h1, h2 {
 }
 .link-btn {
     background-color: var(--dark-primary-color);
-    color: var(--text)fff !important;
+    color: var(--text) !important;
     font-weight: 700;
 }
 .row-title {
@@ -327,10 +337,10 @@ h1, h2 {
     }
 }
 @media screen and (min-width: 640px) {
-    .home {
+    .hero {
         background-attachment: fixed;
     }
-        .home-intro {
+        .hero-intro {
             margin: auto 2rem;
             width: 50%;
         }
@@ -410,10 +420,10 @@ h1, h2 {
     }
 }
 @media screen and (min-width: 1280px) {
-    .home-intro {
+    .hero-intro {
         width: 25%;
     }
-        .home-title {
+        .hero-title {
             font-size: 5rem;
         }
     .news h5 {

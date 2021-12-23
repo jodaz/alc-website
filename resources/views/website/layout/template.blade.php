@@ -4,9 +4,9 @@
     <body>
         @include('website.layout.header')
         <main class="main">
-            <section id="inicio" class="home" style="background-image: url({{ asset('banner.jpg') }})">
-                <div class="home-intro">
-                    <h1 class="home-title">Alcaldía del municipio bermúdez</h1>
+            <section id="inicio" class="hero" style="background-image: url({{ asset('banner.jpg') }})">
+                <div class="hero-intro">
+                    <h1 class="hero-title">Alcaldía del municipio bermúdez</h1>
                 </div>
             </section>
             @yield('content')

@@ -47,6 +47,27 @@
         </div>
     </div>
 </section>
+<div class="hero hero-2" style="background-image: url({{ asset('website/images/beach.jpg') }})">
+    <div class="intro">
+        <h1 class="hero-title">Conócenos</h1>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm">
+            One of three columns
+            </div>
+            <div class="col-sm">
+            One of three columns
+            </div>
+            <div class="col-sm">
+            One of three columns
+            </div>
+            <div class="col-sm">
+            One of three columns
+            </div>
+        </div>
+    </div>
+</div>
 
 <!-- Button trigger modal -->
 <button style="display:none" id="btn-modal" type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
@@ -65,21 +86,21 @@
 
           </div>
           <div class="modal-body">
-    <script async defer src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.2"></script>  
-    <div class="fb-video"
-        data-href="https://www.facebook.com/1811232084/posts/10216131900049519/"
-        data-width="600"
-        data-height="500"
-        data-allowfullscreen="true">
-    </div>
+            <script async defer src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.2"></script>  
+            <div class="fb-video"
+                data-href="https://www.facebook.com/1811232084/posts/10216131900049519/"
+                data-width="600"
+                data-height="500"
+                data-allowfullscreen="true">
+            </div>
           </div>
         </div>
     </div>
 </div>
 
-<marquee style="width:100%; margin:0px; padding:0px"  scrolldelay="100" scrollamout="2" bgcolor="#FFF" direction="left">
+<!-- <marquee style="width:100%; margin:0px; padding:0px"  scrolldelay="100" scrollamout="2" bgcolor="#FFF" direction="left">
     <p style="text-align: center; font-family:arial;font-weight:bold; font-size: 20px;color:#1b4468;"> VES(1 Petro): 258,94 | EURO: 49,92 | USD: 56,21| BTC: 0,00116165</p>
-</marquee>
+</marquee> -->
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
