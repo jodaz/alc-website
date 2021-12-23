@@ -14658,37 +14658,11 @@ window.$ = __webpack_provided_window_dot_jQuery = jquery__WEBPACK_IMPORTED_MODUL
 
 
 
-var button = document.getElementById('navbarButton');
-var menu = document.getElementById('navbarResponsive');
-button.addEventListener('click', function () {
-  menu.classList.toggle('toggle');
-});
+var navbar = document.getElementById('navbar');
 
 (function ($) {
   "use strict"; // Start of use strict
-  // Smooth scrolling using jQuery easing
 
-  $('a.js-scroll-trigger[href*="#"]:not([href="#"])').click(function () {
-    if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
-      var target = $(this.hash);
-      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-
-      if (target.length) {
-        $('html, body').animate({
-          scrollTop: target.offset().top - 56
-        }, 1000, "easeInOutExpo");
-        return false;
-      }
-    }
-  });
-  /**
-   * Custom scripts
-   */
-  // Closes responsive menu when a scroll trigger link is clicked
-
-  $('.js-scroll-trigger').click(function () {
-    $('.navbar-collapse').collapse('hide');
-  });
   $(document).ready(function () {
     $('.owl-carousel').owlCarousel({
       loop: true,
@@ -14710,15 +14684,18 @@ button.addEventListener('click', function () {
         }
       }
     });
-  }); // Activate scrollspy to add active class to navbar items on scroll
-  // $('body').scrollspy({
-  //   target: '#mainNav',
-  //   offset: 56
-  // });
+  });
 })(jQuery); // End of use strict
 
 
 jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).ready(function () {
+  jquery__WEBPACK_IMPORTED_MODULE_0___default()(window).scroll(function () {
+    if (document.documentElement.scrollTop >= window.innerHeight * 0.75 || document.body.scrollTop >= window.innerHeight * 0.75) {
+      navbar.classList.add('navbar--scroll');
+    } else {
+      navbar.classList.remove('navbar--scroll');
+    }
+  });
   jquery__WEBPACK_IMPORTED_MODULE_0___default()(window).resize(function () {
     cambio();
   });
@@ -14751,10 +14728,6 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).ready(function () {
 aos_dist_aos_js__WEBPACK_IMPORTED_MODULE_1___default.a.init({
   duration: 2000
 });
-window.addEventListener("load", function () {
-  var loader = document.querySelector(".loader");
-  loader.className += " hidden"; // class "loader hidden"
-});
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js"), __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js")))
 
 /***/ }),
@@ -14766,8 +14739,8 @@ window.addEventListener("load", function () {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /home/dti/code/sc/resources/js/app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! /home/dti/code/sc/resources/css/app.sass */"./resources/css/app.sass");
+__webpack_require__(/*! /var/www/sc/resources/js/app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! /var/www/sc/resources/css/app.sass */"./resources/css/app.sass");
 
 
 /***/ })
