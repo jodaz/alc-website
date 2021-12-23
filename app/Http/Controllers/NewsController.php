@@ -23,7 +23,8 @@ class NewsController extends Controller
 	public function index()
 	{
 	    	$query = Post::whereStatus('APROBADO')->orderBy('id', 'desc')->paginate('15');
-				$tags = Tag::all();
+						
+			$tags = Tag::all();
 				$lastArticles = Post::whereStatus('APROBADO')->orderBy('id', 'desc')->take('5')->get();
 
 				$title = "Noticias - Alcaldía del Municipio Bermúdez";
@@ -89,6 +90,6 @@ class NewsController extends Controller
 	    /*----------  Count visits  ----------*/
 	    	//$count = views($query)->record()->count();
 	    /*----------  Return view  ----------*/
-    			return view('website.pages.article', compact('url', 'title', 'query', 'tags', 'query', 'lastArticles'));
+    			return view('website.pages.article', compact('url', 'title', 'query', 'tags', 'lastArticles'));
     }
 }

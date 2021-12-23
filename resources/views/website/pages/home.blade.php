@@ -37,8 +37,8 @@
             </div>
         </div>
     </div>
-    <div class="container">
-        <div class="col-12 text-center">
+    <div class="container" style="background:#ffffff">
+        <div class="col-12 text-center" style="background-color:#ffffff;color:#000000;">
             <a class="btn link-btn" href="{{ url('noticias') }}">
                 <span>
                     Ver todas
@@ -58,14 +58,20 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header">
-
+          <h5 class="modal-title">Nuestra Historia</h5>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
             </button>
 
           </div>
           <div class="modal-body">
-            <iframe class="video-article" width="100%" height="315" src="https://www.youtube.com/embed/tHsWol2SuvA"  allowfullscreen></iframe>
+    <script async defer src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.2"></script>  
+    <div class="fb-video"
+        data-href="https://www.facebook.com/1811232084/posts/10216131900049519/"
+        data-width="600"
+        data-height="500"
+        data-allowfullscreen="true">
+    </div>
           </div>
         </div>
     </div>

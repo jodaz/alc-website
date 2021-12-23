@@ -23,6 +23,8 @@ Route::get('/', 'HomeController@index')->name('home');
 Route::get('/noticias', 'NewsController@index')->name('news');
 Route::get('/noticias/{slug}', 'NewsController@show')->name('news.show');
 
+Route::get('/conocenos', 'StaticPageController@conocenos')->name('conocenos');
+
 Route::get('/historia', 'StaticPageController@historia')->name('estaticas.historia');
 Route::get('/ubicacion', 'StaticPageController@ubicacion')->name('estaticas.ubicacion');
 Route::get('/gastronomia', 'StaticPageController@gastronomia')->name('estaticas.gastronomia');
