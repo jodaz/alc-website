@@ -94,7 +94,7 @@ h1, h2 {
 }
 .link-btn {
     background-color: var(--dark-primary-color);
-    color: var(--text)fff !important;
+    color: var(--text) !important;
     font-weight: 700;
 }
 .row-title {

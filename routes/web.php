@@ -28,7 +28,7 @@ Route::get('/conocenos', 'StaticPageController@conocenos')->name('conocenos');
 Route::get('/historia', 'StaticPageController@historia')->name('estaticas.historia');
 Route::get('/ubicacion', 'StaticPageController@ubicacion')->name('estaticas.ubicacion');
 Route::get('/gastronomia', 'StaticPageController@gastronomia')->name('estaticas.gastronomia');
-Route::get('/personajesnotables', 'StaticPageController@biografias')->name('estaticas.biografias');
+Route::get('/personajes-notables', 'StaticPageController@biografias')->name('estaticas.biografias');
 
 
 Auth::routes([
