@@ -21,7 +21,7 @@
 }
 
 :root {
-    --dark-primary-color: #fff;
+    --dark-primary-color: rgb(0, 143, 57);
     --light-primary-color: gray;
     --text: rgb(238, 238, 238);
 }
@@ -168,7 +168,7 @@ h1, h2 {
         padding-bottom: 0.5rem;
     }
 .navbar--scroll {
-    background-color: var(--dark-primary-color);
+    background-color: var(--dark-primary-color) !important;
     -webkit-box-shadow: 0px 2px 4px rgba(0, 0, 0, .5);
                 box-shadow: 0px 2px 4px rgba(0, 0, 0, .5);
 }
@@ -236,6 +236,7 @@ h1, h2 {
         box-shadow: unset;
         padding: .2rem;
         color: var(--text);
+        transition-duration: 500ms;
     }
     .nav-item {
         padding-left: .80rem;
@@ -303,7 +304,7 @@ h1, h2 {
                 text-decoration: underline;
             }
     .footer {
-        background-color:rgb(0, 143, 57);
+        background-color: var(--dark-primary-color);
         color: var(--text);
         text-transform: uppercase;
         font-size: .8rem;
