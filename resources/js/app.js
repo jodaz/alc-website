@@ -9,20 +9,6 @@ const button = document.getElementById('navbarButton');
 const menu = document.getElementById('navbarResponsive');
 const navbar = document.getElementById('header');
 
-button.addEventListener('click', function() {
-  menu.classList.toggle('toggle')
-});
-
-window.onscroll = function() {
-  "use strict";
-  if (document.documentElement.scrollTop >= window.innerHeight * 0.75  ||
-      document.body.scrollTop >= window.innerHeight * 0.75 ) {
-    navbar.classList.add('header--scroll');
-  } else {
-    navbar.classList.remove('header--scroll');
-  }
-}
-
 (function($) {
 "use strict"; // Start of use strict
 
