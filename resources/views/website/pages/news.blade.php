@@ -28,11 +28,9 @@
             </div>
           @endforeach
         </div>
-        <div class="row">
-            <div class="col-12 link-paginate align-center">
-                {{ $query->links() }}
-            </div>
-        </div>
+      
+
+
       </div>
       <div class="col-12 col-md-3">
         <div class="flex flex-row mx-auto text-left block-share">
