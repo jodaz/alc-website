@@ -7,32 +7,34 @@ use App\Post;
 
 class StaticPageController extends Controller
 {
-    public function conocenos()
+    /*public function conocenos()
 	{ 
         $lastArticles  	= Post::whereStatus('APROBADO')->orderBy('id', 'desc')->take('5')->get();
 
         $url = \Request::fullUrl();
         $title= "Conocenos";
         return view('website.pages.statics.conocenos', compact('title', 'url', 'lastArticles'));
-    }
+    }*/
 
     public function historia()
 	{ 
         $lastArticles  	= Post::whereStatus('APROBADO')->orderBy('id', 'desc')->take('5')->get();
 
         $url = \Request::fullUrl();
-        $title= "Historia";
-        return view('website.pages.statics.historia', compact('title', 'url', 'lastArticles'));
+        $title="Historia y Ubicación";
+        $title1= "Historia";
+        $title2= "Ubicación Geográfica";
+        return view('website.pages.statics.historia', compact('title','title1', 'title2', 'url', 'lastArticles'));
     }
 
-    public function ubicacion()
+    /*public function ubicacion()
 	{ 
         $lastArticles  	= Post::whereStatus('APROBADO')->orderBy('id', 'desc')->take('5')->get();
 
         $url = \Request::fullUrl();
         $title= "Ubicación Geográfica";
         return view('website.pages.statics.ubicacion', compact('title', 'url', 'lastArticles'));
-    }
+    }*/
 
      public function gastronomia()
         { 

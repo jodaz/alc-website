@@ -4,49 +4,198 @@
 
 @section('content')
 
-<section class="container home-blog" id="actualidad">
+
+
+{{-- El municipio--}}
+<section class="container home-blog" id="el-municipio">
     <div class="row">
         <div class="col-12 text-center">
             <h1 class="container--title">
-                Actualidad
+                El Municipio
             </h1>
+            <div class="flex-container">
+                <a class="card municipio-col" href="{{ route('estaticas.historia') }}">
+                    <div >
+                        <p>Historia y ubicación</p>
+                    </div>
+                </a>
+                <a class="card municipio-col" href="{{ route('estaticas.gastronomia') }}">
+                    <div>
+                        <p>Cultura</p>
+                    </div>
+                </a>
+                <a class="card municipio-col" href="">
+                    <div>
+                        <p>Espacios públicos</p>
+                    </div>
+                </a>
+                <a class="card municipio-col" href="">
+                    <div>
+                        <p>Sitios turísticos</p>
+                    </div>
+                </a>
+            </div>
         </div>
     </div>
-    <div class="row slider-blog">
-        <div class="col-12">
-            <div class="container">
-                <div id="slider-blog">
-                    <div  class="owl-carousel owl-theme">
-                        @forelse ($queryPost as $post)
-                            <div class="item-slider-blog">
-                                <a href="{{ url('noticias/'.$post->slug) }}">
-                                    <div class="card item-slider-blog">
-                                        <div class="card-body text-center">
-                                            <img src="{{ asset('uploads/posts/'.$post->image) }}" style="width:100%; height:300px;" alt="{{ $post->title }}" title="{{ $post->title }}">
-                                            <h5 class="card-title">{{ $post->title }}</h5>
-                                            <p>{{ $post->created_at->toFormattedDateString() }}</p>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                        @empty
-                            {{-- empty expr --}}
-                        @endforelse
-                    </div>
+</section>
+
+
+{{-- El alcalde--}}
+<section class="container home-blog" id="alcaldia">
+    <div class="row">
+        <div class="col-12 text-center">
+            <h1 class="container--title">
+                Alcaldía
+            </h1>
+            <div class="flex-container">
+                <div class="card alcalde-col">
+                    
+                </div>
+                <div class="card alcalde-col">
+                    <p>El Alcalde</p>
+                </div>
+                <div class="card alcalde-col">
+                    <p>Nuestra institución</p>
                 </div>
             </div>
         </div>
     </div>
-    <div class="container" style="background:#ffffff">
-        <div class="col-12 text-center" style="background-color:#ffffff;color:#000000;">
-            <a class="btn link-btn" href="{{ url('noticias') }}">
-                <span>
-                    Ver todas
-                </span>
-            </a>
+</section>
+
+
+
+{{--Noticias--}}
+<section class="container home-blog" id="noticias">
+    <div class="row">
+        <div class="col-12 text-center">
+            <h1 class="container--title">
+                Noticias
+            </h1>
+            <div class="row slider-blog col-12 container" style="margin-top: 0%">
+                <div  class="owl-carousel owl-theme">
+                    @forelse ($queryPost as $post)
+                        <div class="item-slider-blog">
+                            <a href="{{ url('noticias/'.$post->slug) }}">
+                                <div class="card item-slider-blog">
+                                    <div class="card-body text-center">
+                                        <img src="{{ asset('uploads/posts/'.$post->image) }}" style="width:100%; height:300px;" alt="{{ $post->title }}" title="{{ $post->title }}">
+                                        <h5 class="card-title">{{ $post->title }}</h5>
+                                        <p>{{ $post->created_at->toFormattedDateString() }}</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    @empty
+                        {{-- empty expr --}}
+                    @endforelse
+                </div>
+            </div>        
+        </div>
+    </div>
+
+    {{--<div class="container" style="background:#ffffff;">--}}
+    <div class="col-12 text-center" style="background-color:#ffffff;color:#000000; margin-bottom: 3%;">
+        <a class="btn link-btn" href="{{ url('noticias') }}">
+            <span>
+                Ver todas
+            </span>
+        </a>
+    </div>
+    {{--</div>--}}
+</section>
+
+
+
+{{--Multimedia--}}
+<section class="container home-blog" id="multimedia">
+    <div class="row">
+        <div class="col-12 text-center">
+            <h1 class="container--title">
+                Multimedia
+            </h1>
+            <div class="flex-container">
+                <div class="card alcalde-col">
+                    
+                </div>
+                <div class="card alcalde-col">
+                    
+                </div>
+                <div class="card alcalde-col">
+                    
+                </div>
+            </div>
         </div>
     </div>
 </section>
+
+
+
+
+{{-- Tramites y servicios--}}
+<section class="container home-blog" id="tramites-servicios">
+    <div class="row">
+        <div class="col-12 text-center">
+            <h1 class="container--title">
+                Tramites y servicios
+            </h1>
+            <div class="col-12">
+                <div id="" class="flex-container-tramites">
+                    <div  class="owl-carousel owl-theme">
+                        <div class="item-slider-blog">
+                            <div class="card item-slider-blog tramites-col">
+                                <div class="card-body text-center">
+                                    <p>SUMAT</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item-slider-blog">
+                            <div class="card item-slider-blog tramites-col">
+                                <div class="card-body text-center">
+                                    <p>Catastro</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item-slider-blog">
+                            <div class="card item-slider-blog tramites-col">
+                                <div class="card-body text-center">
+                                    <p>Sindicatura</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item-slider-blog">
+                            <div class="card item-slider-blog tramites-col">
+                                <div class="card-body text-center">
+                                    <p>FundaBermudez</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item-slider-blog">
+                            <div class="card item-slider-blog tramites-col">
+                                <div class="card-body text-center">
+                                    <p>Planeamiento Urbano</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item-slider-blog">
+                            <div class="card item-slider-blog tramites-col">
+                                <div class="card-body text-center">
+                                    <p>IAMTUC</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+  
+        </div>
+    </div>
+</section>
+
+
+
+
+
 
 <!-- Button trigger modal -->
 <button style="display:none" id="btn-modal" type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
