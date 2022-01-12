@@ -191,7 +191,7 @@ h1, h2 {
 }
 
 .flex-container-tramites {
-    margin-top: 5%; 
+    margin-top: 5%;
 }
 
 
@@ -208,7 +208,22 @@ h1, h2 {
         padding: 50px;
     }
 
+    .multimedia-col{
+        flex-grow: 1;
+        flex-basis: 500px;
+        border-radius: 10px;
+        padding: 50px;
+        /*margin: 15rem;*/
+    }
 
+    .flex-container-multimedia{
+        display: flex;
+
+        flex-wrap: wrap;
+        align-self: center;
+        align-items: center;
+        margin-top: 4%;
+    }
 
 
 
@@ -553,7 +568,7 @@ h1, h2 {
         height: 250px;
         flex: 70 60 50%;
     }
-   
+
 }
 
 
@@ -583,17 +598,17 @@ h1, h2 {
     height: 250px;
     border-radius: 10px;
 }
- 
+
 }
 
 
-/* Large devices (laptops/desktops, 992px and up) */            
+/* Large devices (laptops/desktops, 992px and up) */
 
 @media screen and ( min-width: 992px ) {
 
      .flex-container{
         /*justify-content: space-between;*/
-        margin-top: 6%;   
+        margin-top: 6%;
     }
 
     .municipio-col{
@@ -603,7 +618,7 @@ h1, h2 {
         max-width: 230px;
         height: 200px;
         border: 1px solid;
-    
+
     }
 
     .alcalde-col{
@@ -613,6 +628,22 @@ h1, h2 {
         height: 250px;
         flex: 100 100 50%;
 
+    }
+
+    .multimedia-col{
+        flex-basis: 450px;
+        border: 1px solid;
+        max-width: 330px;
+        height: 250px;
+        /*margin: 25px;*/
+        margin-left: 10%;
+        flex: 70 60 100%;
+    }
+
+
+    .flex-container-multimedia{
+        margin-top: 5%;
+        margin-bottom: 3%;
     }
 
     .flex-container-tramites {
@@ -648,11 +679,28 @@ h1, h2 {
         flex: 100 100 50%;
     }
 
+    .multimedia-col{
+        /*flex-basis: 50px;*/
+        border: 1px solid;
+        width: 530px;
+        height: 250px;
+        align-self: center;
+        flex: 50 50 100%;
+        margin-left: 10%;
+        margin-right: 6%;
+    }
+
+    .flex-container-multimedia{
+        margin-top: 5%;
+        margin-bottom: 3%;
+    }
+
     .tramites-col{
         height: 250px;
         border-radius: 10px;
     }
 
- 
+
+
 
 }

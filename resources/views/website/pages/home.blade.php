@@ -49,7 +49,7 @@
             </h1>
             <div class="flex-container">
                 <div class="card alcalde-col">
-                    
+
                 </div>
                 <div class="card alcalde-col">
                     <p>El Alcalde</p>
@@ -89,7 +89,7 @@
                         {{-- empty expr --}}
                     @endforelse
                 </div>
-            </div>        
+            </div>
         </div>
     </div>
 
@@ -113,16 +113,14 @@
             <h1 class="container--title">
                 Multimedia
             </h1>
-            <div class="flex-container">
-                <div class="card alcalde-col">
-                    
+            <div class="flex-container-multimedia">
+                <div class="card multimedia-col">
+                    Leyes
                 </div>
-                <div class="card alcalde-col">
-                    
+                <div class="card multimedia-col">
+                    Ordenanzas
                 </div>
-                <div class="card alcalde-col">
-                    
-                </div>
+
             </div>
         </div>
     </div>
@@ -187,7 +185,7 @@
 
                 </div>
             </div>
-  
+
         </div>
     </div>
 </section>
@@ -214,7 +212,7 @@
 
           </div>
           <div class="modal-body">
-    <script async defer src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.2"></script>  
+    <script async defer src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.2"></script>
     <div class="fb-video"
         data-href="https://www.facebook.com/1811232084/posts/10216131900049519/"
         data-width="600"
