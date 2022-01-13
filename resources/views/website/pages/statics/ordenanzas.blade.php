@@ -9,6 +9,10 @@
                 <div class="row">
                     <div class="col-12">
                         <h2 class="container--title">{{ $title }}</h2>
+                        <hr>
+                    </div>
+                    <div class="col-12">
+                        <h5>Lista de Ordenanzas del Municipio Bermúdez</h5>
                     </div>
                 </div>
                 <div class="row">
@@ -16,19 +20,19 @@
                         <br>
                         <ul>
                             <li>
-                            <h5><a class="nav-link js-scroll-trigger" href="{{ route('estaticas.historia') }}" style="color: #FFFFFF;" title="Historia">
-                            Historia</a></h5>
-                                
+                                Ordenanza 1
                             </li>
                             <li>
-                            <h5><a class="nav-link js-scroll-trigger" href="{{ route('estaticas.ubicacion') }}" style="color: #FFFFFF;" title="Ubicación">
-                                Ubicación</a></h5></li>
+                                Ordenanza 2
+                            </li>
+
                             <li>
-                            <h5><a class="nav-link js-scroll-trigger" href="{{ route('estaticas.gastronomia') }}" style="color: #FFFFFF;" title="Gastronomía">  
-                            Gastronomía</a></h5></li>
+                                Ordenanza 3
+                            </li>
+
                             <li>
-                            <h5><a class="nav-link js-scroll-trigger" href="{{ route('estaticas.biografias') }}" style="color: #FFFFFF;" title="Personajes Notables">    
-                            Personajes Notables</a></h5></li>
+                                Ordenanza 4
+                            </li>
                         </ul>
                     </div>
                 </div>

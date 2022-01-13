@@ -7,14 +7,14 @@ use App\Post;
 
 class StaticPageController extends Controller
 {
-    /*public function conocenos()
+    public function ordenanzas()
 	{ 
         $lastArticles  	= Post::whereStatus('APROBADO')->orderBy('id', 'desc')->take('5')->get();
 
         $url = \Request::fullUrl();
-        $title= "Conocenos";
-        return view('website.pages.statics.conocenos', compact('title', 'url', 'lastArticles'));
-    }*/
+        $title= "Ordenanzas";
+        return view('website.pages.statics.ordenanzas', compact('title', 'url', 'lastArticles'));
+    }
 
     public function historia()
 	{ 

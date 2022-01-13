@@ -4,23 +4,7 @@
             <img class="img-fluid logo-footer" src="{{ asset('website/images/logo.png') }}" alt="Alcaldia de Bermudez">
         </div>
         <div class="col-md-4 col-12">
-            <div class="internal-links">
-                <a href="{{ route('news') }}" title="Noticias">
-                    Noticias
-                </a>
-                <a href="{{ route('estaticas.historia') }}" title="Historia">
-                    Historia
-                </a>
-                <a href="{{ route('estaticas.ubicacion') }}" title="Ubicación">
-                    Ubicación
-                </a>
-                <a href="{{ route('estaticas.gastronomia') }}" title="Gastronomía">
-                    Gastronomía
-                </a>
-                <a href="{{ route('estaticas.biografias') }}" title="Biografías">
-                    Personajes
-                </a>
-            </div>
+  
         </div>
         <div class="col-md-4 col-12">
             <div class="social-links">

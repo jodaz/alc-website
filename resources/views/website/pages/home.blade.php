@@ -114,12 +114,14 @@
                 Multimedia
             </h1>
             <div class="flex-container-multimedia">
-                <div class="card multimedia-col">
-                    Leyes
-                </div>
-                <div class="card multimedia-col">
-                    Ordenanzas
-                </div>
+                <a class="card multimedia-col" style="background-color: #AE1A10; position: relative; text-align: center;">
+                    <img src="{{ asset('website/images/youtube-icon.png') }}" alt="">
+                </a>
+                <a href="{{ route('ordenanzas') }}" class="card multimedia-col" style="background-color: #9B5934; position: relative; text-align: center;">
+                
+                    <img src="{{ asset('website/images/ordenanzas2.png') }}" alt="">
+                </a>
+               
 
             </div>
         </div>
