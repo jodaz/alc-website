@@ -1,6 +1,11 @@
 <?php
 
 use Spatie\Sitemap\SitemapGenerator;
+use Spatie\Sitemap\Sitemap;
+use Spatie\Sitemap\Tags\Url;
+use Spatie\Crawler\Crawler;
+use Psr\Http\Message\UriInterface;
+use App\Post;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,11 +18,52 @@ use Spatie\Sitemap\SitemapGenerator;
 |
 */
 
-Route::get('stmap', function() {
+/*Route::get('stmap', function() {
 
-	SitemapGenerator::create(config('app.url'))->writeToFile('sitemap.xml');
-	return 'Sitemap created';
-});
+	//SitemapGenerator::create(config('app.url'))->writeToFile(public_path('sitemap.xml'));
+
+    Sitemap::create()->add(config('app.url'))->writeToFile(public_path('sitemap.xml'));
+
+
+    //SitemapGenerator::create(config('app.url'))->configureCrawler(function (Crawler $crawler) {$crawler->ignoreRobots();})->writeToFile('sitemap.xml');
+
+
+    //SitemapGenerator::create(config('app.url'))->shouldCrawl(function (UriInterface $url) {\Illuminate\Support\Facades\Log::debug('should crawl', compact('url')); return true;})->hasCrawled(function (Url $url) {\Illuminate\Support\Facades\Log::debug('has crawled', compact('url'));});
+
+return 'Sitemap created';
+
+});*/
+
+
+    Route::get('/stmap', function(){
+        $sitemap = Sitemap::create()
+        ->add(Url::create('/')->setPriority(1.0))
+        ->add(Url::create('/ordenanzas'))
+        ->add(Url::create('/noticias'))
+        ->add(Url::create('/historia')->setChangeFrequency(Url::CHANGE_FREQUENCY_YEARLY))
+        ->add(Url::create('/ubicacion'))
+        ->add(Url::create('/gastronomia'))
+        ->add(Url::create('/personajes-notables'));
+       
+        $post = Post::all();
+        foreach ($post as $post) {
+            $sitemap->add(Url::create("/noticias/{$post->slug}"));
+        }
+        $sitemap->writeToFile(public_path('sitemap.xml'));
+
+
+        return 'Sitemap created';
+    });
+
+
+    /*Route::get('/stmap', function(){
+        Sitemap::create()->add(Url::create(config('app.url')))->writeToFile(public_path('sitemap.xml'));
+
+        return 'Sitemap created';
+    });*/
+
+	
+
 
 Route::get('/', 'HomeController@index')->name('home');
 Route::get('/noticias', 'NewsController@index')->name('news');
