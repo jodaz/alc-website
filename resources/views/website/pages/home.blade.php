@@ -15,25 +15,24 @@
             </h1>
             <div class="flex-container">
                 <a class="card municipio-col" href="{{ route('estaticas.historia') }}">
-                    <div >
-                        <p>Historia y ubicación</p>
-                    </div>
+                    <img class="img-municipio" src="{{ asset('website/images/historia.jpg') }}" alt="Historia y ubicación" style="width:100%; height: 100%">
+                    <div class="text-card">Historia y Ubicación</div>
                 </a>
                 <a class="card municipio-col" href="{{ route('estaticas.gastronomia') }}">
-                    <div>
-                        <p>Cultura</p>
-                    </div>
+                    <img class="img-municipio" src="{{ asset('website/images/cultura.jpg') }}" alt="Cultura" style="width:100%; height: 100%">
+                    <div class="text-card">Cultura</div>
                 </a>
                 <a class="card municipio-col" href="">
-                    <div>
-                        <p>Espacios públicos</p>
-                    </div>
+                    <img class="img-municipio" src="{{ asset('website/images/espacios.png') }}" alt="Espacios públicos" style="width:100%; height: 100%">
+                    <div class="text-card">Espacios Públicos</div>
                 </a>
                 <a class="card municipio-col" href="">
-                    <div>
-                        <p>Sitios turísticos</p>
-                    </div>
+                    <img class="img-municipio" src="{{ asset('website/images/sitios turisticos.jpg') }}" alt="Sitios Turísticos" style="width:100%; height: 100%">
+                    <div class="text-card">Sitios Turísticos</div>
                 </a>
+
+
+
             </div>
         </div>
     </div>
@@ -47,16 +46,15 @@
             <h1 class="container--title">
                 Alcaldía
             </h1>
-            <div class="flex-container">
-                <div class="card alcalde-col">
-
-                </div>
-                <div class="card alcalde-col">
-                    <p>El Alcalde</p>
-                </div>
-                <div class="card alcalde-col">
-                    <p>Nuestra institución</p>
-                </div>
+            <div class="flex-container-alcalde">
+                <a class="card alcalde-col">
+                    <img class="img-municipio" src="{{ asset('website/images/alcalde.jpg') }}" alt="Sitios Turísticos" style="width:100%; height: 100%">
+                    <div class="text-card">El Alcalde</div>
+                </a>
+                <a class="card alcalde-col">
+                    <img class="img-municipio" src="{{ asset('website/images/alcaldia.jpg') }}" alt="Sitios Turísticos" style="width:100%; height: 100%">
+                    <div class="text-card">Nuestra institución</div>
+                </a>
             </div>
         </div>
     </div>
