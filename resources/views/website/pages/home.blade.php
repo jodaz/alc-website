@@ -48,7 +48,7 @@
             </h1>
             <div class="flex-container-alcalde">
                 <a class="card alcalde-col">
-                    <img class="img-municipio" src="{{ asset('website/images/alcalde.jpg') }}" alt="Sitios Turísticos" style="width:100%; height: 100%">
+                    {{--<img class="img-municipio" src="{{ asset('website/images/alcalde.jpg') }}" alt="Sitios Turísticos" style="width:100%; height: 100%">--}}
                     <div class="text-card">El Alcalde</div>
                 </a>
                 <a class="card alcalde-col">
@@ -116,10 +116,10 @@
                     <img src="{{ asset('website/images/youtube-icon.png') }}" alt="">
                 </a>
                 <a href="{{ route('ordenanzas') }}" class="card multimedia-col" style="background-color: #9B5934; position: relative; text-align: center;">
-                
+
                     <img src="{{ asset('website/images/ordenanzas2.png') }}" alt="">
                 </a>
-               
+
 
             </div>
         </div>
