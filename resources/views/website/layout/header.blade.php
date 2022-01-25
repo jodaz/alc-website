@@ -12,48 +12,36 @@
                         Inicio
                     </a>
                 </li>
-
-                <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" {{--href="{{ route('conocenos') }}"--}} href="{{ url('/#el-municipio') }}" style="color: #FFFFFF;" title="El Municipio">
-                        <img src="{{ asset('icons/informacion.png') }}" style="height: 22px; width: 26px">
-                        El Municipio
-                    </a>
-                </li>
-
-
-                <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="{{ url('/#alcaldia') }}" style="color: #FFFFFF;" title="Alcaldía">
-                    <img src="{{ asset('icons/alcaldia.png') }}" style="height: 22px; width: 26px">
-                        Alcaldía
-                    </a>
-                </li>
-
-
                 <li class="nav-item">
                     <a class="nav-link js-scroll-trigger" {{--href="{{ route('news') }}"--}} href="{{ url('/#noticias') }}" style="color: #FFFFFF;" title="Noticias">
                         <img src="{{ asset('icons/periodico.png') }}" style="height: 20px; width: 23px">
                         Noticias
                     </a>
                 </li>
-
-
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" {{--href="{{ route('conocenos') }}"--}} href="{{ url('/#el-municipio') }}" style="color: #FFFFFF;" title="El Municipio">
+                        <img src="{{ asset('icons/informacion.png') }}" style="height: 22px; width: 26px">
+                        El Municipio
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="{{ url('/#alcaldia') }}" style="color: #FFFFFF;" title="Alcaldía">
+                    <img src="{{ asset('icons/alcaldia.png') }}" style="height: 22px; width: 26px">
+                        Alcaldía
+                    </a>
+                </li>
                 <li class="nav-item">
                     <a class="nav-link js-scroll-trigger" href="{{ url('/#multimedia') }}" style="color: #FFFFFF;" title="Multimedia">
                     <img src="{{ asset('icons/pantalla.png') }}" style="height: 23px; width: 20px">
                         Multimedia
                     </a>
                 </li>
-
-
                 <li class="nav-item">
                     <a class="nav-link js-scroll-trigger" href="{{ url('/#tramites-servicios') }}" style="color: #FFFFFF;" title="Tramites y Servicios">
                     <img src="{{ asset('icons/tramites.png') }}" style="height: 17px; width: 24px">
                         Tramites y Servicios
                     </a>
                 </li>
-
-                
-               
             </ul>
         </div>
     </nav>

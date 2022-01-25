@@ -26,4 +26,7 @@
     <link rel="stylesheet" href="{{ asset('website/css/app.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/website/css/bootstrap/mdb.min.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/website/css/styles.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    {{--<link rel="stylesheet" href="{{ asset('assets/website/css/font-awesome.min.css') }}">--}}
+
 </head>

@@ -5,6 +5,12 @@
 @section('content')
 
 
+<div class="icon-bar">
+    <a href="https://www.facebook.com/alcbermudez" class="facebook"><i class="fa fa-facebook"></i></a>
+    <a href="https://twitter.com/AlcBermudez" class="twitter"><i class="fa fa-twitter"></i></a>
+    <a href="https://www.instagram.com/alcaldiadebermudez1" class="instagram"><i class="fa fa-instagram"></i></a>
+</div>
+
 
 {{--Noticias--}}
 <section class="container home-blog" id="noticias">
@@ -116,11 +122,6 @@
 
                     <img src="{{ asset('website/images/ordenanzas2.png') }}" alt="">
                 </a>
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 00c53a5a78eb78755adefc78e580dde6245c3a41
             </div>
         </div>
     </div>
