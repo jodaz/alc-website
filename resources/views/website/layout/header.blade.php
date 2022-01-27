@@ -19,7 +19,7 @@
             <ul class="navbar-nav">
                 <li class="nav-item">
                     <a class="nav-link js-scroll-trigger" href="{{ route('home') }}" style="color: #FFFFFF;" title="Inicio">
-                        <img src="{{ asset('public/icons/home.png') }}" style="height: 20px; width: 24px">
+                        <img src="{{ asset('icons/home.png') }}" style="height: 20px; width: 24px">
                         Inicio
                     </a>
                 </li>
