@@ -293,7 +293,6 @@ h1, h2 {
     transition: all 0.3s ease;
     color: white;
     font-size: 20px;
-
   }
 
   .icon-bar a:hover {
@@ -317,10 +316,6 @@ h1, h2 {
     border-bottom-right-radius: 7px;
 
   }
-
-
-
-
 
 
 
@@ -594,7 +589,7 @@ h1, h2 {
         width: 35%;
     }
     .footer {
-        height: 20rem;
+        height: 18rem;
     }
     .logo-footer {
         width: 70%;
