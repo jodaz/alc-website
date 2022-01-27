@@ -51,6 +51,7 @@ a {
         text-align: left;
     }
     .home-title {
+        margin-left: 3rem;
         text-transform: uppercase;
         font-weight: 700;
         letter-spacing: 0.5px;
@@ -175,7 +176,7 @@ h1, h2 {
 .navbar--scroll {
     background-color: var(--dark-primary-color) !important;
     -webkit-box-shadow: 0px 2px 4px rgba(0, 0, 0, .5);
-                box-shadow: 0px 2px 4px rgba(0, 0, 0, .5);
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, .5);
 }
 
 .card {
@@ -217,11 +218,33 @@ h1, h2 {
     flex-grow: 1;
 }
 
+
+
+.municipio-col:hover{
+    -ms-transform: scale(1.1); /* IE 9 */
+    -webkit-transform: scale(1.1); /* Safari 3-8 */
+    transform: scale(1.1);
+}
+
+.alcalde-col:hover{
+    -ms-transform: scale(1.1); /* IE 9 */
+    -webkit-transform: scale(1.1); /* Safari 3-8 */
+    transform: scale(1.1);
+}
+
+
+.multimedia-col:hover{
+    -ms-transform: scale(1.1); /* IE 9 */
+    -webkit-transform: scale(1.1); /* Safari 3-8 */
+    transform: scale(1.1);
+}
+
 .alcalde-col{
     flex-grow: 1;
     width: 530px;
     height: 280px;
     align-self: center;
+    border-color: black;
 }
 
 .flex-container-alcalde{
@@ -253,10 +276,13 @@ h1, h2 {
 
 .icon-bar {
     position: fixed;
-    top: 50%;
+    top: 65%;
     -webkit-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
+    color: white;
+    display: block;
+
   }
 
   /* Style the icon bar links */
@@ -267,16 +293,17 @@ h1, h2 {
     transition: all 0.3s ease;
     color: white;
     font-size: 20px;
+
   }
 
-  /* Style the social media icons with color, if you want */
   .icon-bar a:hover {
-    background-color: rgba(86, 83, 92, 0.993);
+    background-color: black;
   }
 
   .facebook {
     background-color: #3B5998;
     color: white;
+    border-top-right-radius: 7px;
   }
 
   .twitter {
@@ -287,8 +314,9 @@ h1, h2 {
   .instagram {
     background: #993fa5;;
     color: white;
-  }
+    border-bottom-right-radius: 7px;
 
+  }
 
 
 
@@ -587,6 +615,8 @@ h1, h2 {
         width: 100%;
         height: 250px;
         flex: 20 50 50%;
+        border-color: black;
+
     }
 
     .alcalde-col{
@@ -596,6 +626,7 @@ h1, h2 {
         flex: 20 50 100%;
         margin-right: 10px;
         margin-top: 10px;
+        border-color: black;
     }
 
 
@@ -606,10 +637,19 @@ h1, h2 {
         flex: 20 50 100%;
         margin-right: 10px;
         margin-top: 10px;
+        border-color: black;
     }
 
     .multimedia-col img {
         height: 65%
+    }
+
+    .icon-bar{
+        display: none;
+    }
+
+    .social-media-navbar{
+        display: block;
     }
 
 }
@@ -625,11 +665,22 @@ h1, h2 {
         width: 100%;
         height: 200px;
         flex: 20 50 30%;
+        border-color: black;
+
+    }
+
+    .alcalde-col{
+        border-color: black;
     }
 
     .tramites-col{
         height: 200px;
         border-radius: 10px;
+        border-color: black;
+    }
+
+    .multimedia-col{
+        border-color: black;
     }
 
     .flex-container-alcalde{
@@ -640,6 +691,13 @@ h1, h2 {
         display: flex;
     }
 
+    .icon-bar{
+        display: none;
+    }
+
+    .social-media-navbar{
+        display: block;
+    }
 
 }
 
@@ -653,15 +711,19 @@ h1, h2 {
         max-width: 230px;
         height: 180px;
         flex: 100 100 20%;
+        border-color: black;
+
     }
 
     .alcalde-col:first-child {
         margin-right: 0.8rem;
         margin-left: 2rem;
+        border-color: black;
     }
     .alcalde-col:last-child {
         margin-right: 2rem;
         margin-left: 0.8rem;
+        border-color: black;
     }
 
     .tramites-col{
@@ -672,16 +734,26 @@ h1, h2 {
     .multimedia-col:first-child {
         margin-right: 0.8rem;
         margin-left: 2rem;
+        border-color: black;
     }
     .multimedia-col:last-child {
         margin-right: 2rem;
         margin-left: 0.8rem;
+        border-color: black;
     }
 
     .multimedia-col img {
         height: 85%
     }
 
+
+    .icon-bar{
+        display: block;
+    }
+
+    .social-media-navbar{
+        display: none;
+    }
 }
 
 
@@ -697,6 +769,26 @@ h1, h2 {
         flex-basis: 120px;
         max-width: 230px;
         height: 200px;
+        opacity:0.9;
+        transition: all 0.5s;
+        -webkit-transition: all 0.5s;
+        border-color: black;
+    }
+
+    .municipio-col:hover {
+        opacity:1;
+        border-color: black;
+    }
+
+    .alcalde-col{
+        opacity:0.9;
+        transition: all 0.5s;
+        -webkit-transition: all 0.5s;
+        border-color: black;
+    }
+    .alcalde-col:hover {
+        opacity:1;
+        border-color: black;
     }
 
     .alcalde-col:first-child {
@@ -711,14 +803,25 @@ h1, h2 {
     .multimedia-col:first-child {
         margin-right: 1rem;
         margin-left: 10rem;
+        border-color: black;
     }
     .multimedia-col:last-child {
         margin-right: 10rem;
         margin-left: 1rem;
+        border-color: black;
     }
 
     .flex-container-tramites {
         margin-top: 6%;
+    }
+
+
+    .icon-bar{
+        display: block;
+    }
+
+    .social-media-navbar{
+        display: none;
     }
 
 }
@@ -739,6 +842,26 @@ h1, h2 {
         max-width: 250px;
         height: 250px;
         flex: 100 100 50%;
+        opacity:0.9;
+        transition: all 0.5s;
+        -webkit-transition: all 0.5s;
+        border-color: black;
+    }
+
+    .municipio-col:hover {
+        opacity:1;
+        border-color: black;
+    }
+
+    .alcalde-col{
+        opacity:0.9;
+        transition: all 0.5s;
+        -webkit-transition: all 0.5s;
+        border-color: black;
+    }
+    .alcalde-col:hover {
+        opacity:1;
+        border-color: black;
     }
 
     .alcalde-col:first-child {
@@ -753,10 +876,12 @@ h1, h2 {
     .multimedia-col:first-child {
         margin-right: 2rem;
         margin-left: 10rem;
+        border-color: black;
     }
     .multimedia-col:last-child {
         margin-right: 10rem;
         margin-left: 2rem;
+        border-color: black;
     }
 
     .tramites-col{
@@ -764,5 +889,12 @@ h1, h2 {
         border-radius: 10px;
     }
 
+    .icon-bar{
+        display: block;
+    }
+
+    .social-media-navbar{
+        display: none;
+    }
 
 }
