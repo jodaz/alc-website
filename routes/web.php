@@ -73,8 +73,12 @@ Route::get('/ordenanzas', 'StaticPageController@ordenanzas')->name('ordenanzas')
 
 Route::get('/historia', 'StaticPageController@historia')->name('estaticas.historia');
 Route::get('/ubicacion', 'StaticPageController@ubicacion')->name('estaticas.ubicacion');
-Route::get('/gastronomia', 'StaticPageController@gastronomia')->name('estaticas.gastronomia');
+Route::get('/cultura', 'StaticPageController@cultura')->name('estaticas.cultura');
 Route::get('/personajes-notables', 'StaticPageController@biografias')->name('estaticas.biografias');
+Route::get('/turismo', 'StaticPageController@turismo')->name('estaticas.turismo');
+Route::get('/espacios-publicos', 'StaticPageController@espacios')->name('estaticas.espacios');
+Route::get('/alcalde', 'StaticPageController@alcalde')->name('estaticas.alcalde');
+Route::get('/alcaldia', 'StaticPageController@alcaldia')->name('estaticas.alcaldia');
 
 
 Auth::routes([

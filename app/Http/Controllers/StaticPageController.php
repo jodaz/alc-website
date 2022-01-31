@@ -36,23 +36,54 @@ class StaticPageController extends Controller
         return view('website.pages.statics.ubicacion', compact('title', 'url', 'lastArticles'));
     }*/
 
-     public function gastronomia()
-        { 
-            $lastArticles   = Post::whereStatus('APROBADO')->orderBy('id', 'desc')->take('5')->get();
+    public function cultura(){ 
+        $lastArticles   = Post::whereStatus('APROBADO')->orderBy('id', 'desc')->take('5')->get();
 
-            $url = \Request::fullUrl();
-            $title= "Gastronomía";
-            return view('website.pages.statics.gastronomia', compact('title', 'url', 'lastArticles'));
-        }
+        $url = \Request::fullUrl();
+        $title= "Cultura";
+        return view('website.pages.statics.cultura', compact('title', 'url', 'lastArticles'));
+    }
 
-     public function biografias()
-        { 
-            $lastArticles   = Post::whereStatus('APROBADO')->orderBy('id', 'desc')->take('5')->get();
+    public function biografias(){ 
+        $lastArticles   = Post::whereStatus('APROBADO')->orderBy('id', 'desc')->take('5')->get();
 
-            $url = \Request::fullUrl();
-            $title= "Personajes Notables";
-            return view('website.pages.statics.biografias', compact('title', 'url', 'lastArticles'));
-        }
+        $url = \Request::fullUrl();
+        $title= "Personajes Notables";
+        return view('website.pages.statics.biografias', compact('title', 'url', 'lastArticles'));
+    }
+
+    public function turismo(){ 
+        $lastArticles   = Post::whereStatus('APROBADO')->orderBy('id', 'desc')->take('5')->get();
+
+        $url = \Request::fullUrl();
+        $title= "Sitios Turísticos";
+        return view('website.pages.statics.turismo', compact('title', 'url', 'lastArticles'));
+    }
+
+    public function espacios(){ 
+        $lastArticles   = Post::whereStatus('APROBADO')->orderBy('id', 'desc')->take('5')->get();
+
+        $url = \Request::fullUrl();
+        $title= "Espacios Públicos";
+        return view('website.pages.statics.espacios', compact('title', 'url', 'lastArticles'));
+    }
+
+    public function alcalde(){ 
+        $lastArticles   = Post::whereStatus('APROBADO')->orderBy('id', 'desc')->take('5')->get();
+
+        $url = \Request::fullUrl();
+        $title= "El Alcalde";
+        return view('website.pages.statics.alcalde', compact('title', 'url', 'lastArticles'));
+    }
+
+
+    public function alcaldia(){ 
+        $lastArticles   = Post::whereStatus('APROBADO')->orderBy('id', 'desc')->take('5')->get();
+
+        $url = \Request::fullUrl();
+        $title= "Nuestra Institución";
+        return view('website.pages.statics.alcaldia', compact('title', 'url', 'lastArticles'));
+    }
 
 
 }

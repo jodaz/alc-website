@@ -79,15 +79,15 @@
                     <img class="img-municipio" src="{{ asset('website/images/historia.jpg') }}" alt="Historia y ubicación" style="width:100%; height: 100%">
                     <div class="text-card">Historia y Ubicación</div>
                 </a>
-                <a class="card municipio-col" href="{{ route('estaticas.gastronomia') }}">
+                <a class="card municipio-col" href="{{ route('estaticas.cultura') }}">
                     <img class="img-municipio" src="{{ asset('website/images/cultura.jpg') }}" alt="Cultura" style="width:100%; height: 100%">
                     <div class="text-card">Cultura</div>
                 </a>
-                <a class="card municipio-col" href="">
+                <a class="card municipio-col" href="{{ route('estaticas.espacios') }}">
                     <img class="img-municipio" src="{{ asset('website/images/espacios.png') }}" alt="Espacios públicos" style="width:100%; height: 100%">
                     <div class="text-card">Espacios Públicos</div>
                 </a>
-                <a class="card municipio-col" href="">
+                <a class="card municipio-col" href="{{ route('estaticas.turismo') }}">
                     <img class="img-municipio" src="{{ asset('website/images/sitios turisticos.jpg') }}" alt="Sitios Turísticos" style="width:100%; height: 100%">
                     <div class="text-card">Sitios Turísticos</div>
                 </a>
@@ -105,11 +105,11 @@
                 Alcaldía
             </h1>
             <div class="flex-container-alcalde">
-                <a class="card alcalde-col">
+                <a class="card alcalde-col"  href="{{ route('estaticas.alcalde') }}">
                     {{--<img class="img-municipio" src="{{ asset('website/images/alcalde.jpg') }}" alt="Sitios Turísticos" style="width:100%; height: 100%">--}}
                     <div class="text-card">El Alcalde</div>
                 </a>
-                <a class="card alcalde-col">
+                <a class="card alcalde-col"  href="{{ route('estaticas.alcaldia') }}">
                     <img class="img-municipio" src="{{ asset('website/images/alcaldia.jpg') }}" alt="Sitios Turísticos" style="width:100%; height: 100%">
                     <div class="text-card">Nuestra institución</div>
                 </a>
