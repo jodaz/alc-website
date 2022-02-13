@@ -45,7 +45,7 @@ $(document).ready(function () {
         }
     });
 
-    $(window).resize(function () {
+    /*$(window).resize(function () {
       cambio();
     });
 
@@ -73,7 +73,7 @@ $(document).ready(function () {
           }
         })
       }
-    }
+    }*/
 });
 
 AOS.init({ duration: 2000 });

@@ -21,7 +21,7 @@
 }
 
 :root {
-    --dark-primary-color: rgb(0, 143, 57);
+    --dark-primary-color: rgb(27, 173, 179);
     --light-primary-color: gray;
     --text: rgb(238, 238, 238);
 }
@@ -51,6 +51,7 @@ a {
         text-align: left;
     }
     .home-title {
+        margin-left: 3rem;
         text-transform: uppercase;
         font-weight: 700;
         letter-spacing: 0.5px;
@@ -66,8 +67,13 @@ a {
         background-color: rgba(84, 114, 114, 0.4);
         z-index: 0;
     }
+
+    .navbar {
+        background-color: var(--dark-primary-color);
+    }
+
 .container {
-    padding-top: 4rem;
+    padding-top: 3rem;
     padding-bottom: 2rem;
 }
     .container--title {
@@ -170,8 +176,151 @@ h1, h2 {
 .navbar--scroll {
     background-color: var(--dark-primary-color) !important;
     -webkit-box-shadow: 0px 2px 4px rgba(0, 0, 0, .5);
-                box-shadow: 0px 2px 4px rgba(0, 0, 0, .5);
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, .5);
 }
+
+.card {
+    border-radius: 9px;
+}
+
+.text-card{
+    position: absolute;
+    bottom: 8px;
+    left: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.flex-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-self: center;
+    align-items: center;
+    margin-top: 4%;
+}
+
+.tramites-col{
+    height: 250px;
+    border-radius: 10px;
+}
+
+.flex-container-tramites {
+    margin-top: 5%;
+}
+
+.img-municipio{
+    border-radius: 8px;
+}
+
+.municipio-col{
+    flex-grow: 1;
+}
+
+
+
+.municipio-col:hover{
+    -ms-transform: scale(1.1); /* IE 9 */
+    -webkit-transform: scale(1.1); /* Safari 3-8 */
+    transform: scale(1.1);
+}
+
+.alcalde-col:hover{
+    -ms-transform: scale(1.1); /* IE 9 */
+    -webkit-transform: scale(1.1); /* Safari 3-8 */
+    transform: scale(1.1);
+}
+
+
+.multimedia-col:hover{
+    transform: scale(1.1);
+    -ms-transform: scale(1.1); /* IE 9 */
+    -webkit-transform: scale(1.1); /* Safari 3-8 */
+}
+
+.alcalde-col{
+    flex-grow: 1;
+    width: 530px;
+    height: 280px;
+    align-self: center;
+    border-color: black;
+}
+
+.flex-container-alcalde{
+    margin-top: 5%;
+    margin-bottom: 3%;
+}
+
+.multimedia-col{
+    flex-grow: 1;
+    border-radius: 10px;
+    width: 530px;
+    height: 280px;
+    align-self: center;
+}
+
+.flex-container-multimedia{
+    margin-top: 5%;
+    margin-bottom: 3%;
+}
+
+.multimedia-col img {
+    flex-shrink: 0;
+    min-width: 100%;
+    min-height: 100%
+}
+
+
+
+
+.socialmedia-sidebar {
+    position: fixed;
+    top: 65%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    color: white;
+    display: block;
+
+  }
+
+  /* Style the icon bar links */
+  .socialmedia-sidebar a {
+    display: block;
+    text-align: center;
+    padding: 16px;
+    transition: all 0.3s ease;
+    color: white;
+    font-size: 20px;
+  }
+
+  .socialmedia-sidebar a:hover {
+    background-color: black;
+  }
+
+  .facebook {
+    background-color: #3B5998;
+    color: white;
+    border-top-right-radius: 7px;
+  }
+
+  .twitter {
+    background: #55ACEE;
+    color: white;
+  }
+
+  .instagram {
+    background: #993fa5;;
+    color: white;
+    border-bottom-right-radius: 7px;
+
+  }
+
+  .social-media-navbar{
+    display: none;
+}
+
 
 @media screen and (min-width: 320px) {
     header {
@@ -326,6 +475,7 @@ h1, h2 {
         margin-top: 1rem;
     }
 }
+
 @media screen and (min-width: 640px) {
     .home {
         background-attachment: fixed;
@@ -360,7 +510,7 @@ h1, h2 {
         width: 28%;
     }
     .navbar {
-        background-color: transparent;
+        background-color: var(--dark-primary-color);
         padding: .3rem;
         color: var(--text);
     }
@@ -409,6 +559,7 @@ h1, h2 {
         margin-top: 5rem;
     }
 }
+
 @media screen and (min-width: 1280px) {
     .home-intro {
         width: 25%;
@@ -440,9 +591,307 @@ h1, h2 {
         width: 35%;
     }
     .footer {
-        height: 20rem;
+        height: 18rem;
     }
     .logo-footer {
         width: 70%;
     }
+
+
+}
+
+
+/* Extra small devices (phones, 600px and down) */
+@media screen and ( max-width: 600px) {
+
+    .municipio-col{
+        flex-basis: 330px;
+        margin-left: 70%;
+        margin: 10px;
+        margin-top: 5px;
+        width: 100%;
+        height: 250px;
+        flex: 20 50 50%;
+        border-color: black;
+
+    }
+
+    .alcalde-col{
+        flex-basis: 500px;
+        width: 100%;
+        height: 250px;
+        flex: 20 50 100%;
+        margin-right: 10px;
+        margin-top: 10px;
+        border-color: black;
+    }
+
+
+    .multimedia-col{
+        flex-basis: 500px;
+        width: 100%;
+        height: 250px;
+        flex: 20 50 100%;
+        margin-right: 10px;
+        margin-top: 10px;
+        border-color: black;
+    }
+
+    .multimedia-col img {
+        height: 65%
+    }
+
+    .socialmedia-sidebar{
+        display: none;
+    }
+
+    .social-media-navbar{
+        display: block;
+    }
+
+}
+
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media screen and ( min-width: 600px ) {
+
+    .municipio-col{
+        flex-basis: 330px;
+        margin: 10px;
+        margin-top: 5px;
+        width: 100%;
+        height: 200px;
+        flex: 20 50 30%;
+        border-color: black;
+
+    }
+
+    .alcalde-col{
+        border-color: black;
+    }
+
+    .tramites-col{
+        height: 200px;
+        border-radius: 10px;
+        border-color: black;
+    }
+
+    .multimedia-col{
+        border-color: black;
+    }
+
+    .flex-container-alcalde{
+        display: flex;
+    }
+
+    .flex-container-multimedia{
+        display: flex;
+    }
+
+    .socialmedia-sidebar{
+        display: none;
+    }
+
+    .social-media-navbar{
+        display: block;
+    }
+
+}
+
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media screen and ( min-width: 768px ) {
+
+    .municipio-col{
+        flex-basis: 500px;
+        margin: 5px;
+        max-width: 230px;
+        height: 180px;
+        flex: 100 100 20%;
+        border-color: black;
+
+    }
+
+    .alcalde-col:first-child {
+        margin-right: 0.8rem;
+        margin-left: 2rem;
+        border-color: black;
+    }
+    .alcalde-col:last-child {
+        margin-right: 2rem;
+        margin-left: 0.8rem;
+        border-color: black;
+    }
+
+    .tramites-col{
+        height: 250px;
+        border-radius: 10px;
+    }
+
+    .multimedia-col:first-child {
+        margin-right: 0.8rem;
+        margin-left: 2rem;
+        border-color: black;
+    }
+    .multimedia-col:last-child {
+        margin-right: 2rem;
+        margin-left: 0.8rem;
+        border-color: black;
+    }
+
+    .multimedia-col img {
+        height: 85%
+    }
+
+
+    .socialmedia-sidebar{
+        display: block;
+    }
+
+    .social-media-navbar{
+        display: none;
+    }
+}
+
+
+/* Large devices (laptops/desktops, 992px and up) */
+
+@media screen and ( min-width: 992px ) {
+
+     .flex-container{
+        margin-top: 6%;
+    }
+
+    .municipio-col{
+        flex-basis: 120px;
+        max-width: 230px;
+        height: 200px;
+        opacity:0.9;
+        transition: all 0.5s;
+        -webkit-transition: all 0.5s;
+        border-color: black;
+    }
+
+    .municipio-col:hover {
+        opacity:1;
+        border-color: black;
+    }
+
+    .alcalde-col{
+        opacity:0.9;
+        transition: all 0.5s;
+        -webkit-transition: all 0.5s;
+        border-color: black;
+    }
+    .alcalde-col:hover {
+        opacity:1;
+        border-color: black;
+    }
+
+    .alcalde-col:first-child {
+        margin-right: 1rem;
+        margin-left: 10rem;
+    }
+    .alcalde-col:last-child {
+        margin-right: 10rem;
+        margin-left: 1rem;
+    }
+
+    .multimedia-col:first-child {
+        margin-right: 1rem;
+        margin-left: 10rem;
+        border-color: black;
+    }
+    .multimedia-col:last-child {
+        margin-right: 10rem;
+        margin-left: 1rem;
+        border-color: black;
+    }
+
+    .flex-container-tramites {
+        margin-top: 6%;
+    }
+
+
+    .socialmedia-sidebar{
+        display: block;
+    }
+
+    .social-media-navbar{
+        display: none;
+    }
+
+}
+
+
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media screen and ( min-width: 1200px ) {
+
+    .flex-container{
+        margin-top: 5%;
+        margin-bottom: 3%;
+    }
+
+    .municipio-col{
+        flex-basis: 230px;
+        margin: 5px;
+        max-width: 250px;
+        height: 250px;
+        flex: 100 100 50%;
+        opacity:0.9;
+        transition: all 0.5s;
+        -webkit-transition: all 0.5s;
+        border-color: black;
+    }
+
+    .municipio-col:hover {
+        opacity:1;
+        border-color: black;
+    }
+
+    .alcalde-col{
+        opacity:0.9;
+        transition: all 0.5s;
+        -webkit-transition: all 0.5s;
+        border-color: black;
+    }
+    .alcalde-col:hover {
+        opacity:1;
+        border-color: black;
+    }
+
+    .alcalde-col:first-child {
+        margin-right: 2rem;
+        margin-left: 10rem;
+    }
+    .alcalde-col:last-child {
+        margin-right: 10rem;
+        margin-left: 2rem;
+    }
+
+    .multimedia-col:first-child {
+        margin-right: 2rem;
+        margin-left: 10rem;
+        border-color: black;
+    }
+    .multimedia-col:last-child {
+        margin-right: 10rem;
+        margin-left: 2rem;
+        border-color: black;
+    }
+
+    .tramites-col{
+        height: 250px;
+        border-radius: 10px;
+    }
+
+    .socialmedia-sidebar{
+        display: block;
+    }
+
+    .social-media-navbar{
+        display: none;
+    }
+
 }

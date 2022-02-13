@@ -4,23 +4,7 @@
             <img class="img-fluid logo-footer" src="{{ asset('website/images/logo.png') }}" alt="Alcaldia de Bermudez">
         </div>
         <div class="col-md-4 col-12">
-            <div class="internal-links">
-                <a href="{{ route('news') }}" title="Noticias">
-                    Noticias
-                </a>
-                <a href="{{ route('estaticas.historia') }}" title="Historia">
-                    Historia
-                </a>
-                <a href="{{ route('estaticas.ubicacion') }}" title="Ubicación">
-                    Ubicación
-                </a>
-                <a href="{{ route('estaticas.gastronomia') }}" title="Gastronomía">
-                    Gastronomía
-                </a>
-                <a href="{{ route('estaticas.biografias') }}" title="Biografías">
-                    Personajes
-                </a>
-            </div>
+
         </div>
         <div class="col-md-4 col-12">
             <div class="social-links">
@@ -29,7 +13,7 @@
                     <img src="{{ asset('icons/facebook.svg') }}" style="border-radius:50%;" class="icon icon-facebook"></img>
                     Facebook
                 </a>
-                <a href="https://twitter.com/AlcBermudez_" target="_blank">
+                <a href="https://twitter.com/AlcBermudez" target="_blank">
                     <img src="{{ asset('icons/twitter.svg') }}" style="border-radius:50%;" class="icon icon-twitter"></img>
                     Twitter
                 </a>
