@@ -144,7 +144,7 @@ h1, h2 {
     .social-links a {
         text-decoration: none;
         color: #bfbfbf;
-        margin: 0.5em 0;
+        margin: 0.2px 0;
         font-family: LatoL;
     }
     .icon {
@@ -319,6 +319,21 @@ h1, h2 {
 
   .social-media-navbar{
     display: none;
+}
+
+#paragraph-info{
+    margin-top: 2px;
+    margin-bottom: 2px;
+    font-size: 14px;
+}
+
+#link_ordinance{
+    transition: 0.4s;
+}
+
+#link_ordinance:hover{
+    text-decoration: underline;
+    opacity: 0.6;
 }
 
 
@@ -591,7 +606,7 @@ h1, h2 {
         width: 35%;
     }
     .footer {
-        height: 18rem;
+        height: 15rem;
     }
     .logo-footer {
         width: 70%;

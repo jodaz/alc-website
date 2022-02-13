@@ -20,18 +20,15 @@
                         <br>
                         <ul>
                             <li>
-                                Ordenanza 1
+                             <a id="link_ordinance" href="{{ url('/assets/ordinances/ORDENANZA SIAEC PROPIO APROBADA.pdf') }}">Ordenanza de Actividad Económica 2022</a>
                             </li>
+                            <br>
                             <li>
-                                Ordenanza 2
+                               <a id="link_ordinance" href="{{ url('/assets/ordinances/ORDENANZA DE ASEO URBANO 2022.pdf') }}">Ordenanza de Aseo Urbano 2022</a>
                             </li>
-
+                            <br>
                             <li>
-                                Ordenanza 3
-                            </li>
-
-                            <li>
-                                Ordenanza 4
+                                <a id="link_ordinance" href="{{ url('/assets/ordinances/REFORMA ORDENANZA SOBRE BEBIDAS ALCOHOLICAS APROBADA NUEVA.pdf') }}">Ordenanza Funcionamiento de Bebidas Alcoholicas</a>
                             </li>
                         </ul>
                     </div>

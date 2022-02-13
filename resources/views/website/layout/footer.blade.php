@@ -4,9 +4,6 @@
             <img class="img-fluid logo-footer" src="{{ asset('website/images/logo.png') }}" alt="Alcaldia de Bermudez">
         </div>
         <div class="col-md-4 col-12">
-
-        </div>
-        <div class="col-md-4 col-12">
             <div class="social-links">
                 <h4>Síguenos</h4>
                 <a href="https://www.facebook.com/alcbermudez" target="_blank">
@@ -23,5 +20,12 @@
                 </a>
             </div>
         </div>
+         <div class="col-md-4 col-12" style="text-transform: none; margin-top: 4rem; text-align: left;">
+            <p id="paragraph-info"> Desarrollado por: Dirección de Tecnología e Informática</p>
+            <p id="paragraph-info">Alcaldía del Municipio Bermúdez</p>
+            <p id="paragraph-info">Rif.: G-20000222-1</p>
+            <p id="paragraph-info">Dirección.: Av. Carabobo C/C calle Cantaura, Edificio Municipal.</p>
+        </div>
+
     </div>
 </div>
