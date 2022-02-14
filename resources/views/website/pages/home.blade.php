@@ -68,55 +68,55 @@
 
 
 {{-- El municipio--}}
-<section class="container home-blog" id="el-municipio">
+<!--<section class="container home-blog" id="el-municipio">
     <div class="row">
         <div class="col-12 text-center">
             <h1 class="container--title">
                 El Municipio
             </h1>
             <div class="flex-container">
-                <a class="card municipio-col" href="{{ route('estaticas.historia') }}">
-                    <img class="img-municipio" src="{{ asset('website/images/historia.jpg') }}" alt="Historia y ubicación" style="width:100%; height: 100%">
+                <a class="card municipio-col" href="{ { route('estaticas.historia') }}">
+                    <img class="img-municipio" src="{ { asset('website/images/historia.jpg') }}" alt="Historia y ubicación" style="width:100%; height: 100%">
                     <div class="text-card">Historia y Ubicación</div>
                 </a>
-                <a class="card municipio-col" href="{{ route('estaticas.cultura') }}">
-                    <img class="img-municipio" src="{{ asset('website/images/cultura.jpg') }}" alt="Cultura" style="width:100%; height: 100%">
+                <a class="card municipio-col" href="{ { route('estaticas.cultura') }}">
+                    <img class="img-municipio" src="{ { asset('website/images/cultura.jpg') }}" alt="Cultura" style="width:100%; height: 100%">
                     <div class="text-card">Cultura</div>
                 </a>
-                <a class="card municipio-col" href="{{ route('estaticas.espacios') }}">
-                    <img class="img-municipio" src="{{ asset('website/images/espacios.png') }}" alt="Espacios públicos" style="width:100%; height: 100%">
+                <a class="card municipio-col" href="{ { route('estaticas.espacios') }}">
+                    <img class="img-municipio" src="{ { asset('website/images/espacios.png') }}" alt="Espacios públicos" style="width:100%; height: 100%">
                     <div class="text-card">Espacios Públicos</div>
                 </a>
-                <a class="card municipio-col" href="{{ route('estaticas.turismo') }}">
-                    <img class="img-municipio" src="{{ asset('website/images/sitios turisticos.jpg') }}" alt="Sitios Turísticos" style="width:100%; height: 100%">
+                <a class="card municipio-col" href="{ { route('estaticas.turismo') }}">
+                    <img class="img-municipio" src="{ { asset('website/images/sitios turisticos.jpg') }}" alt="Sitios Turísticos" style="width:100%; height: 100%">
                     <div class="text-card">Sitios Turísticos</div>
                 </a>
             </div>
         </div>
     </div>
-</section>
+</section>-->
 
 
 {{-- El alcalde--}}
-<section class="container home-blog" id="alcaldia">
+<!--<section class="container home-blog" id="alcaldia">
     <div class="row">
         <div class="col-12 text-center">
             <h1 class="container--title">
                 Alcaldía
             </h1>
             <div class="flex-container-alcalde">
-                <a class="card alcalde-col"  href="{{ route('estaticas.alcalde') }}">
+                <a class="card alcalde-col"  href="{ { route('estaticas.alcalde') }}">
                     {{--<img class="img-municipio" src="{{ asset('website/images/alcalde.jpg') }}" alt="Sitios Turísticos" style="width:100%; height: 100%">--}}
                     <div class="text-card">El Alcalde</div>
                 </a>
-                <a class="card alcalde-col"  href="{{ route('estaticas.alcaldia') }}">
-                    <img class="img-municipio" src="{{ asset('website/images/alcaldia.jpg') }}" alt="Sitios Turísticos" style="width:100%; height: 100%">
+                <a class="card alcalde-col"  href="{ { route('estaticas.alcaldia') }}">
+                    <img class="img-municipio" src="{ { asset('website/images/alcaldia.jpg') }}" alt="Sitios Turísticos" style="width:100%; height: 100%">
                     <div class="text-card">Nuestra institución</div>
                 </a>
             </div>
         </div>
     </div>
-</section>
+</section>-->
 
 
 
@@ -144,7 +144,7 @@
 
 
 {{-- Tramites y servicios--}}
-<section class="container home-blog" id="tramites-servicios">
+<!--<section class="container home-blog" id="tramites-servicios">
     <div class="row">
         <div class="col-12 text-center">
             <h1 class="container--title">
@@ -200,7 +200,7 @@
             </div>
         </div>
     </div>
-</section>
+</section>-->
 
 
 

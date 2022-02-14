@@ -39,11 +39,11 @@ return 'Sitemap created';
         $sitemap = Sitemap::create()
         ->add(Url::create('/')->setPriority(1.0))
         ->add(Url::create('/ordenanzas'))
-        ->add(Url::create('/noticias'))
-        ->add(Url::create('/historia')->setChangeFrequency(Url::CHANGE_FREQUENCY_YEARLY))
+        ->add(Url::create('/noticias'));
+        /*->add(Url::create('/historia')->setChangeFrequency(Url::CHANGE_FREQUENCY_YEARLY))
         ->add(Url::create('/ubicacion'))
         ->add(Url::create('/gastronomia'))
-        ->add(Url::create('/personajes-notables'));
+        ->add(Url::create('/personajes-notables'));*/
        
         $post = Post::all();
         foreach ($post as $post) {
@@ -71,14 +71,14 @@ Route::get('/noticias/{slug}', 'NewsController@show')->name('news.show');
 
 Route::get('/ordenanzas', 'StaticPageController@ordenanzas')->name('ordenanzas');
 
-Route::get('/historia', 'StaticPageController@historia')->name('estaticas.historia');
+/*Route::get('/historia', 'StaticPageController@historia')->name('estaticas.historia');
 Route::get('/ubicacion', 'StaticPageController@ubicacion')->name('estaticas.ubicacion');
 Route::get('/cultura', 'StaticPageController@cultura')->name('estaticas.cultura');
 Route::get('/personajes-notables', 'StaticPageController@biografias')->name('estaticas.biografias');
 Route::get('/turismo', 'StaticPageController@turismo')->name('estaticas.turismo');
 Route::get('/espacios-publicos', 'StaticPageController@espacios')->name('estaticas.espacios');
 Route::get('/alcalde', 'StaticPageController@alcalde')->name('estaticas.alcalde');
-Route::get('/alcaldia', 'StaticPageController@alcaldia')->name('estaticas.alcaldia');
+Route::get('/alcaldia', 'StaticPageController@alcaldia')->name('estaticas.alcaldia');*/
 
 
 Auth::routes([
