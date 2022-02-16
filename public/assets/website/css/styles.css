@@ -144,8 +144,9 @@ h1, h2 {
     .social-links a {
         text-decoration: none;
         color: #bfbfbf;
-        margin: 0.2px 0;
+        margin: 0.3px 0;
         font-family: LatoL;
+        font-weight: bold;
     }
     .icon {
         color: white;
@@ -334,6 +335,11 @@ h1, h2 {
 #link_ordinance:hover{
     text-decoration: underline;
     opacity: 0.6;
+}
+
+
+#social-liks-item:hover {
+    opacity: 0.8;
 }
 
 
