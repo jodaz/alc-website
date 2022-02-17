@@ -9,6 +9,10 @@
                 <div class="row">
                     <div class="col-12">
                         <h2 class="container--title">{{ $title }}</h2>
+                        <hr>
+                    </div>
+                    <div class="col-12">
+                        <h5>Lista de Ordenanzas del Municipio Bermúdez</h5>
                     </div>
                 </div>
                 <div class="row">
@@ -16,19 +20,16 @@
                         <br>
                         <ul>
                             <li>
-                            <h5><a class="nav-link js-scroll-trigger" href="{{ route('estaticas.historia') }}" style="color: #FFFFFF;" title="Historia">
-                            Historia</a></h5>
-                                
+                             <a id="link_ordinance" href="{{ url('/assets/ordinances/ORDENANZA SIAEC PROPIO APROBADA.pdf') }}">Ordenanza de Actividad Económica 2022</a>
                             </li>
+                            <br>
                             <li>
-                            <h5><a class="nav-link js-scroll-trigger" href="{{ route('estaticas.ubicacion') }}" style="color: #FFFFFF;" title="Ubicación">
-                                Ubicación</a></h5></li>
+                               <a id="link_ordinance" href="{{ url('/assets/ordinances/ORDENANZA DE ASEO URBANO 2022.pdf') }}">Ordenanza de Aseo Urbano 2022</a>
+                            </li>
+                            <br>
                             <li>
-                            <h5><a class="nav-link js-scroll-trigger" href="{{ route('estaticas.gastronomia') }}" style="color: #FFFFFF;" title="Gastronomía">  
-                            Gastronomía</a></h5></li>
-                            <li>
-                            <h5><a class="nav-link js-scroll-trigger" href="{{ route('estaticas.biografias') }}" style="color: #FFFFFF;" title="Personajes Notables">    
-                            Personajes Notables</a></h5></li>
+                                <a id="link_ordinance" href="{{ url('/assets/ordinances/REFORMA ORDENANZA SOBRE BEBIDAS ALCOHOLICAS APROBADA NUEVA.pdf') }}">Ordenanza Funcionamiento de Bebidas Alcoholicas</a>
+                            </li>
                         </ul>
                     </div>
                 </div>
