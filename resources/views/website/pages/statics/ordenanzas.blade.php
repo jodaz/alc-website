@@ -32,11 +32,11 @@
                             </li>
                             <br>
                             <li>
-                                <a id="link_ordinance" href="{{ url('/assets/ordinances/REFORMA ORDENANZA PATENTE DE VEHICULOS.pdf') }}">Ordenanza Funcionamiento de Bebidas Alcoholicas</a>
+                                <a id="link_ordinance" href="{{ url('/assets/ordinances/REFORMA ORDENANZA PATENTE DE VEHICULOS.pdf') }}">Reforma Ordenanza Patente de Vehiculos</a>
                             </li>
                             <br>
                             <li>
-                                <a id="link_ordinance" href="{{ url('/assets/ordinances/ORDENANZA DE LAS TASAS MUNICIPALES COMPLETADO.pdf') }}">Ordenanza Funcionamiento de Bebidas Alcoholicas</a>
+                                <a id="link_ordinance" href="{{ url('/assets/ordinances/ORDENANZA DE LAS TASAS MUNICIPALES COMPLETADO.pdf') }}">Ordenanza de las Tasas Municipales</a>
                             </li>
                         </ul>
                     </div>
