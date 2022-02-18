@@ -30,6 +30,14 @@
                             <li>
                                 <a id="link_ordinance" href="{{ url('/assets/ordinances/REFORMA ORDENANZA SOBRE BEBIDAS ALCOHOLICAS APROBADA NUEVA.pdf') }}">Ordenanza Funcionamiento de Bebidas Alcoholicas</a>
                             </li>
+                            <br>
+                            <li>
+                                <a id="link_ordinance" href="{{ url('/assets/ordinances/REFORMA ORDENANZA PATENTE DE VEHICULOS.pdf') }}">Ordenanza Funcionamiento de Bebidas Alcoholicas</a>
+                            </li>
+                            <br>
+                            <li>
+                                <a id="link_ordinance" href="{{ url('/assets/ordinances/ORDENANZA DE LAS TASAS MUNICIPALES COMPLETADO.pdf') }}">Ordenanza Funcionamiento de Bebidas Alcoholicas</a>
+                            </li>
                         </ul>
                     </div>
                 </div>
