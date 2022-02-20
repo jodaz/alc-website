@@ -21,7 +21,7 @@
                         <div class="card-body text-center">
                             <img src="{{ asset('uploads/posts/'.$article->image) }}" alt="{{ $article->title }}" title="{{ $article->title }}">
                             <h5 class="card-title">{{ $article->title }}</h5>
-                            <p>{{ $article->created_at->toFormattedDateString() }}</p>
+                            <p>{{ $article->updated_at->isoFormat('MMM D, YYYY') }}</p>
                         </div>
                     </div>
                 </a>
@@ -64,7 +64,7 @@
               <img width="50" height="45" src="{{ asset('uploads/posts/'.$article->image) }}" alt="{{ $article->title }}" title="{{ $article->title }}" />
               <a href="{{ route('news.show', $article->slug) }}" class="slug-link">{{ $article->title }}</a>
             </div>
-              <span style="font-weight: bold; color: #BB6143;">{{ $article->created_at->toFormattedDateString() }}</span>
+              <span style="font-weight: bold; color: #BB6143;">{{ $article->updated_at->isoFormat('MMM D, YYYY') }}</span>
             <hr>
           @endforeach
         </div>

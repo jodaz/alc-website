@@ -41,7 +41,7 @@
                                     <div class="card-body text-center">
                                         <img src="{{ asset('uploads/posts/'.$post->image) }}" style="width:100%; height:300px;" alt="{{ $post->title }}" title="{{ $post->title }}">
                                         <h5 class="card-title">{{ $post->title }}</h5>
-                                        <p>{{ $post->created_at->toFormattedDateString() }}</p>
+                                        <p>{{ $post->updated_at->locale('es')->isoFormat('LL') }}</p>
                                     </div>
                                 </div>
                             </a>

@@ -45,6 +45,19 @@
                     </div>
                 </div>
 
+
+                <div class="form-group row">
+                    <div class="col-lg-12">
+                        <label>Fecha de Publicación <span class="text-danger">*</span></label>
+                        {!! Form::date("date", old('date', @$row->updated_at), ["placeholder" => "Fecha de Publicación", "class" => "form-control", "size" => "3x2",  "readonly", "id" => "date"]) !!}
+                    </div>
+                </div>
+
+
+
+
+
+
                 <div class="form-group row">
                     <div class="col-lg-6">
                         <label>Imagen </label>

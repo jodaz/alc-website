@@ -69,6 +69,7 @@ $(document).ready(function() {
 
     jQuery('#date').datepicker({
         autoclose: true,
+        language: "es",
         todayHighlight: true,
         format: "yyyy-mm-dd"
     });
@@ -192,7 +193,11 @@ $(document).ready(function() {
         "columns": [
             {data: 'title', name: 'title'},
             {data: 'description', name: 'description'},
-            {data: 'created_at', name: 'created_at'},
+            {data: 'updated_at', name: 'updated_at', render: function (data) {
+        var date = new Date(data);
+        var month = date.getMonth() + 1;
+        return date.getDate() + "/" +  (month.toString().length > 1 ? month : "0" + month) + "/" + date.getFullYear();
+    }},
             {data: 'user.email', name: 'user.email'},
             {data: 'status', name: 'status'},
             {
