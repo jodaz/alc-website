@@ -68,7 +68,7 @@
                             <img width="50" height="45" src="{{ asset('uploads/posts/'.$article->image) }}" alt="{{ $article->title }}" title="{{ $article->title }}" />
                             <a href="{{ route('news.show', $article->slug) }}" class="slug-link">{{ $article->title }}</a>
                         </div>
-                            <span style="font-weight: bold; color: #BB6143;">{{ $article->created_at->toFormattedDateString() }}</span>
+                            <span id="date-news" style="font-weight: bold; color: #BB6143;">{{ $article->updated_at->locale('es')->isoFormat('MMM D, YYYY') }}</span>
                         <hr>
                     @endforeach
                 </div>

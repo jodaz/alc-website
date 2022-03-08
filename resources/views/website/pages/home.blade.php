@@ -32,13 +32,13 @@
             <h1 class="container--title">
                 Noticias
             </h1>
-            <div class="row slider-blog col-12 container" style="margin-top: 0%">
+            <div class="row slider-blog col-12 container" style="margin-top: 0%; margin-bottom: 0%">
                 <div  class="owl-carousel owl-theme">
                     @forelse ($queryPost as $post)
                         <div class="item-slider-blog">
                             <a href="{{ url('noticias/'.$post->slug) }}">
                                 <div class="card item-slider-blog">
-                                    <div class="card-body text-center">
+                                    <div class="card-body text-center" id="news-card-home" style="height: 28rem">
                                         <img src="{{ asset('uploads/posts/'.$post->image) }}" style="width:100%; height:300px;" alt="{{ $post->title }}" title="{{ $post->title }}">
                                         <h5 class="card-title">{{ $post->title }}</h5>
                                         <p>{{ $post->updated_at->locale('es')->isoFormat('LL') }}</p>
@@ -50,18 +50,21 @@
                         {{-- empty expr --}}
                     @endforelse
                 </div>
+                <div class="col-12 text-center" style="color:#000000; margin-bottom: 3%;">
+                    <a class="btn link-btn" href="{{ url('noticias') }}">
+                <span>
+                    Ver todas
+                </span>
+                    </a>
+                </div>
             </div>
+
         </div>
+
     </div>
 
     {{--<div class="container" style="background:#ffffff;">--}}
-    <div class="col-12 text-center" style="color:#000000; margin-bottom: 3%;">
-        <a class="btn link-btn" href="{{ url('noticias') }}">
-            <span>
-                Ver todas
-            </span>
-        </a>
-    </div>
+   
     {{--</div>--}}
 </section>
 

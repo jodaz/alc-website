@@ -32,7 +32,7 @@ class PostController extends Controller
      */
     public function index()
     {
-        $posts = Post::whereUserId(Auth::user()->id)->orderBy('id', 'desc')->get();
+        $posts = Post::whereUserId(Auth::user()->id)->orderBy('updated_at', 'desc')->get();
 
         return view($this->options['route-views']."index")
             ->with('articles', $posts)
@@ -41,7 +41,7 @@ class PostController extends Controller
 
     public function listPosts()
     {
-        $query = Post::with('user')->orderBy('id', 'desc');
+        $query = Post::with('user')->orderBy('updated_at', 'desc');
         return DataTables::eloquent($query)
             ->toJson();
     }

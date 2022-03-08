@@ -22,10 +22,10 @@ class NewsController extends Controller
 	 */
 	public function index()
 	{
-	    	$query = Post::whereStatus('APROBADO')->orderBy('id', 'desc')->paginate('15');
+	    	$query = Post::whereStatus('APROBADO')->orderBy('updated_at', 'desc')->paginate('15');
 						
 			$tags = Tag::all();
-				$lastArticles = Post::whereStatus('APROBADO')->orderBy('id', 'desc')->take('5')->get();
+				$lastArticles = Post::whereStatus('APROBADO')->orderBy('updated_at', 'desc')->take('5')->get();
 
 				$title = "Noticias - Alcaldía del Municipio Bermúdez";
 				$description = "Todo el acontecer de nuestro municipio, asi como regional, nacional e internacional.";
@@ -60,7 +60,7 @@ class NewsController extends Controller
     	/*----------  Query posts  ----------*/
 				$query 			= Post::whereStatus('APROBADO')->whereSlug($slug)->firstOrFail();
 				$tags 		= Tag::all();
-				$lastArticles  	= Post::whereStatus('APROBADO')->orderBy('id', 'desc')->take('5')->get();
+				$lastArticles  	= Post::whereStatus('APROBADO')->orderBy('updated_at', 'desc')->take('5')->get();
 	    /*----------  Section tags  ----------*/
 	    		$title = $query->title." - Alcaldía del Municipio Bermúdez";
 	        $description = $query->description;

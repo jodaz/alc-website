@@ -9,7 +9,7 @@ class StaticPageController extends Controller
 {
     public function ordenanzas()
 	{ 
-        $lastArticles  	= Post::whereStatus('APROBADO')->orderBy('id', 'desc')->take('5')->get();
+        $lastArticles  	= Post::whereStatus('APROBADO')->orderBy('updated_at', 'desc')->take('5')->get();
 
         $url = \Request::fullUrl();
         $title= "Ordenanzas";
@@ -18,7 +18,7 @@ class StaticPageController extends Controller
 
     public function historia()
 	{ 
-        $lastArticles  	= Post::whereStatus('APROBADO')->orderBy('id', 'desc')->take('5')->get();
+        $lastArticles  	= Post::whereStatus('APROBADO')->orderBy('updated_at', 'desc')->take('5')->get();
 
         $url = \Request::fullUrl();
         $title="Historia y Ubicación";
@@ -29,7 +29,7 @@ class StaticPageController extends Controller
 
     /*public function ubicacion()
 	{ 
-        $lastArticles  	= Post::whereStatus('APROBADO')->orderBy('id', 'desc')->take('5')->get();
+        $lastArticles  	= Post::whereStatus('APROBADO')->orderBy('updated_at', 'desc')->take('5')->get();
 
         $url = \Request::fullUrl();
         $title= "Ubicación Geográfica";
@@ -37,7 +37,7 @@ class StaticPageController extends Controller
     }*/
 
     public function cultura(){ 
-        $lastArticles   = Post::whereStatus('APROBADO')->orderBy('id', 'desc')->take('5')->get();
+        $lastArticles   = Post::whereStatus('APROBADO')->orderBy('updated_at', 'desc')->take('5')->get();
 
         $url = \Request::fullUrl();
         $title= "Cultura";
@@ -45,7 +45,7 @@ class StaticPageController extends Controller
     }
 
     public function biografias(){ 
-        $lastArticles   = Post::whereStatus('APROBADO')->orderBy('id', 'desc')->take('5')->get();
+        $lastArticles   = Post::whereStatus('APROBADO')->orderBy('updated_at', 'desc')->take('5')->get();
 
         $url = \Request::fullUrl();
         $title= "Personajes Notables";
@@ -53,7 +53,7 @@ class StaticPageController extends Controller
     }
 
     public function turismo(){ 
-        $lastArticles   = Post::whereStatus('APROBADO')->orderBy('id', 'desc')->take('5')->get();
+        $lastArticles   = Post::whereStatus('APROBADO')->orderBy('updated_at', 'desc')->take('5')->get();
 
         $url = \Request::fullUrl();
         $title= "Sitios Turísticos";
@@ -61,7 +61,7 @@ class StaticPageController extends Controller
     }
 
     public function espacios(){ 
-        $lastArticles   = Post::whereStatus('APROBADO')->orderBy('id', 'desc')->take('5')->get();
+        $lastArticles   = Post::whereStatus('APROBADO')->orderBy('updated_at', 'desc')->take('5')->get();
 
         $url = \Request::fullUrl();
         $title= "Espacios Públicos";
@@ -69,7 +69,7 @@ class StaticPageController extends Controller
     }
 
     public function alcalde(){ 
-        $lastArticles   = Post::whereStatus('APROBADO')->orderBy('id', 'desc')->take('5')->get();
+        $lastArticles   = Post::whereStatus('APROBADO')->orderBy('updated_at', 'desc')->take('5')->get();
 
         $url = \Request::fullUrl();
         $title= "El Alcalde";
@@ -78,7 +78,7 @@ class StaticPageController extends Controller
 
 
     public function alcaldia(){ 
-        $lastArticles   = Post::whereStatus('APROBADO')->orderBy('id', 'desc')->take('5')->get();
+        $lastArticles   = Post::whereStatus('APROBADO')->orderBy('updated_at', 'desc')->take('5')->get();
 
         $url = \Request::fullUrl();
         $title= "Nuestra Institución";
