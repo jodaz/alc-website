@@ -55,31 +55,5 @@ class RolesAndPermissionsSeeder extends Seeder
         $role1->givePermissionTo('create article');
 
         $role2 = Role::create(['name' => 'super-admin']);
-
-        //Create User
-        //User admin
-        $user = User::create([
-            'name'  	=>   'Erain',
-            'surname'   =>   'Moya',
-            'slug'   	=>   'user-admin',
-            'avatar'    =>   'user-admin.png',
-            'email'     =>   'evmoya.89@gmail.com',
-            'password'  =>   bcrypt('evmoya_31_@1989'),
-            'status'    =>   1,
-        ]);
-        $user->assignRole($role2);
-
-        //User writter
-        $user = User::create([
-            'name'		  =>   'User',
-            'surname'     =>   'Writter',
-            'slug'   	  =>   'user-admin',
-            'avatar'      =>   'user-admin.png',
-            'email'       =>   'demo@devscakes.com',
-            'password'    =>   bcrypt('qwerty123'),
-            'status'      =>   1,
-        ]);
-        $user->assignRole($role1);
-
     }
 }
