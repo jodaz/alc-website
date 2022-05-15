@@ -61,7 +61,7 @@ class HomeController extends Controller
         /**
          * posts
          */
-        $queryPost = Post::whereStatus('APROBADO')->orderBy('id', 'desc')->take(12)->get();
+        $queryPost = Post::whereStatus('APROBADO')->orderBy('updated_at', 'desc')->take(12)->get();
 
         /*Retorno de la vista*/
         return view('website.pages.home', compact('queryPost'));

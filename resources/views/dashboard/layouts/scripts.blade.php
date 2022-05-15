@@ -9,6 +9,7 @@
  <script src="{{ asset('assets/dashboard/js/scripts.bundle.js') }}"></script>
  <script src="{{ asset('assets/dashboard/plugins/datatables/datatables.bundle.js') }}"></script>
  <script src="{{ asset('assets/dashboard/plugins/bootstrap-datepicker/js/bootstrap-datepicker.js') }}"></script>
+ <script src="{{ asset('assets/dashboard/plugins/bootstrap-datepicker/locales/bootstrap-datepicker.es.min.js') }}"></script>
  <script src="{{ asset('assets/dashboard/js/login-general.js') }}"></script>
  <script src="{{ asset('assets/dashboard/js/dashboard.js') }}"></script>
  <script src="{{ asset('assets/dashboard/js/select2.js') }}"></script>

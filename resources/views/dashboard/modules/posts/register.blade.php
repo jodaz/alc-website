@@ -105,6 +105,24 @@
                     @enderror
                 </div>
             </div>
+
+
+
+
+            <div class="form-group row">
+                <div class="col-lg-12">
+                    <label>Fecha de Publicación <span class="text-danger">*</span></label>
+                    {!! Form::date("date", old('date', @$row->updated_at), ["placeholder" => "Fecha de Publicación", "class" => "form-control", "size" => "3x2", "id" => "date"]) !!}
+                    @error('date')
+                        <div class="text text-danger">{{ $message }}</div>
+                    @enderror
+                </div>
+            </div>
+
+
+
+
+
             <div class="form-group row">
               <div class="col-lg-12">
                 <label>Dirección a vídeo de Youtube</label>

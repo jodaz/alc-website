@@ -32,7 +32,7 @@ class PostController extends Controller
      */
     public function index()
     {
-        $posts = Post::whereUserId(Auth::user()->id)->orderBy('id', 'desc')->get();
+        $posts = Post::whereUserId(Auth::user()->id)->orderBy('updated_at', 'desc')->get();
 
         return view($this->options['route-views']."index")
             ->with('articles', $posts)
@@ -41,7 +41,7 @@ class PostController extends Controller
 
     public function listPosts()
     {
-        $query = Post::with('user')->orderBy('id', 'desc');
+        $query = Post::with('user')->orderBy('updated_at', 'desc');
         return DataTables::eloquent($query)
             ->toJson();
     }
@@ -93,7 +93,9 @@ class PostController extends Controller
             'status' => $request->status,
             'image' => $slug.'.'.$file->extension(),
             'description' => $request->description,
-            'youtube_video' => $youtubeId
+            'youtube_video' => $youtubeId,
+            'created_at' => $request->date,
+            'updated_at' => $request->date,
         ]);
 
         // Save tags
@@ -159,6 +161,7 @@ class PostController extends Controller
         $edit->description  = $request->input('description');
         $edit->post         = $request->input('post');
         $edit->slug         = SlugService::createSlug(Post::class, 'slug', $request->input('title'));
+        $edit->updated_at       = $request->input('date');
         $edit->status       = $request->input('status');
         /**
          * Update logo

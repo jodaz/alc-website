@@ -28,7 +28,8 @@ class PostCreateFormRequest extends FormRequest
             'tag_id'        =>  'required',
             'description'   =>  'required|max:155',
             'post'          =>  'required',
-            'status'        =>  'required'
+            'status'        =>  'required',
+            'date'        =>  'required',
         ];
 
         if ($this->getMethod() == 'POST') {
@@ -59,6 +60,7 @@ class PostCreateFormRequest extends FormRequest
             'tag_id.required'       =>  'Seleccione una :attribute',
             'description.required'  =>  'Ingrese la :attribute de la publicación',
             'description.max'       =>  'La :attribute debe tener un máximo de 70 caracteres',
+            'date.required'        =>  'Ingrese fecha de la publicación',
             'post.required'         =>  'Redacte la :attribute',
             'status.required'       =>  'Seleccione un :attribute',
             'image.required'       =>  'Cargue una :attribute para el artículo',

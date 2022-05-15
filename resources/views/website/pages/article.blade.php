@@ -9,7 +9,7 @@
                 <div class="row">
                     <div class="col-12">
                         <h2 class="container--title">{{ $query->title }}</h2>
-                        <p class="container--title">Publicado: {{ $query->created_at->toFormattedDateString() }}</p>
+                        <p class="container--title">Publicado: {{ $query->updated_at->locale('es')->isoFormat('LL') }}</p>
                     </div>
                 </div>
                 <div class="row">
@@ -64,7 +64,7 @@
                             <img width="50" height="45" src="{{ asset('uploads/posts/'.$article->image) }}" alt="{{ $article->title }}" title="{{ $article->title }}" />
                             <a href="{{ route('news.show', $article->slug) }}" class="slug-link">{{ $article->title }}</a>
                         </div>
-                            <span style="font-weight: bold; color: #BB6143;">{{ $article->created_at->toFormattedDateString() }}</span>
+                            <p id="date-news" style="font-weight: bold; color: #BB6143;">{{ $article->updated_at->locale('es')->isoFormat('MMM D, YYYY') }}</p>
                         <hr>
                     @endforeach
                 </div>

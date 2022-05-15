@@ -12,7 +12,7 @@
         <div class="card card-primary card-outline">
             <div class="card-header alert alert-danger">
                 <div class="row">
-                    <h5 class="m-0">Registro de Articulos <b>(</b> <a href="{{ Route($options['route'].'.create') }}" title="Registrar parroquia">
+                    <h5 class="m-0">Registro de Articulos <b>(</b> <a href="{{ Route($options['route'].'.create') }}" title="Registrar artículos">
                             <span>Nuevo</span>
                         </a><b>)</b></h5>
                 </div>
@@ -34,6 +34,7 @@
                         </thead>
                     </table>
                 @else
+                
                     <table class="table table-bordered table-striped datatables" style="text-align: center">
                         <thead>
                             <tr>
@@ -49,7 +50,7 @@
                                         {{ $item->title }}
                                     </td>
                                     <td>
-                                        {{ $item->created_at }}
+                                       {{ $item->updated_at->isoFormat('D/MM/Y') }}
                                     </td>
                                     <td>
                                         {{ $item->status }}
@@ -58,6 +59,7 @@
                                         <a href="{{ route('posts.show',$item->id) }}" class="btn btn-info"><i class='flaticon-eye'></i></a>
                                     </td>
                                 </tr>
+
                             @empty
                                 <tr>
                                     <td colspan="4" class="text-center">
@@ -65,6 +67,7 @@
                                     </td>
                                 </tr>
                             @endforelse
+                            
                     </table>
                 @endrole
             </div>

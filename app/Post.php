@@ -21,7 +21,8 @@ class Post extends Model implements Viewable
         'slug',
         'image',
         'status',
-        'youtube_video'
+        'youtube_video',
+        'updated_at'
     ];
 
     /**
