@@ -66,50 +66,48 @@ class UserController extends Controller
      */
     public function store(UsersFormRequest $request)
     {
-        /** */
-        $file = $request->avatar;
-        $var = $request->input('name').' '.$request->input('surname');
-        $clear_password = str_random(12);
-        $password = bcrypt($clear_password);
-        /***/
-        $create             = new User();
-        $create->name       = $request->input('name');
-        $create->surname    = $request->input('surname');
-        $create->slug       = SlugService::createSlug(User::class, 'slug', $var);
-        $create->avatar     = $create->slug.'.'.$file->extension();
-        $create->email      = $request->input('email');
-        $create->password   = $password;
-        $create->status     = $request->input('status');
+        $slug = $request->input('name').' '.$request->input('surname');
 
-        if($create->save()) {
+        $user = User::create([
+            'name' => $request->name,
+            'surname' => $request->surname,
+            'email' => $request->email,
+            'status' => 'ACTIVO',
+            'slug' => SlugService::createSlug(User::class, 'slug', $slug),
+            'password' => bcrypt($request->password)
+        ]);
+
+        $user->roles()->sync([$request->role]);
+
+        // if($create->save()) {
             /**
              * Assign role
              */
-            $role = Role::find($request->input('role'));
-            $create->assignRole($role);
+
             /**
             *
             **/
-            $path = public_path('/uploads/users/');
-            if (!File::exists($path)) {
-                File::makeDirectory($path, 0775, true, true);
-            }
+            // $path = public_path('/uploads/users/');
+            // if (!File::exists($path)) {
+            //     File::makeDirectory($path, 0775, true, true);
+            // }
+
             /**
             *
             **/
-            $file->move(public_path().'/uploads/users/', $create->avatar);
+            // $file->move(public_path().'/uploads/users/', $create->avatar);
             /**
              * Send mail
              */
-            $data = new \stdClass();
-            $data->name = $create->name;
-            $data->last_name = $create->surname;
-            $data->email = $create->email;
-            $data->password = $clear_password;
-            Mail::to($create->email)->send(new UserRegister($data));
+            // $data = new \stdClass();
+            // $data->name = $create->name;
+            // $data->last_name = $create->surname;
+            // $data->email = $create->email;
+            // $data->password = $clear_password;
+            // Mail::to($create->email)->send(new UserRegister($data));
+        // }
 
-            return redirect($this->options['route'])->withSuccess('Registro exitoso!!');
-        }
+        return redirect($this->options['route'])->withSuccess('Registro exitoso!!');
     }
     /**
      *
@@ -128,6 +126,7 @@ class UserController extends Controller
             ->with('roleId', $role_id)
             ->with('row', $user);
     }
+
     /**
      *
      * User update
@@ -135,41 +134,35 @@ class UserController extends Controller
      */
     public function update(UsersFormRequest $request, User $user)
     {
-        $var = $request->input('name').' '.$request->input('surname');
+        $slug = $request->input('name').' '.$request->input('surname');
 
-        $edit             = User::find($user->id);
-        $edit->name       = $request->input('name');
-        $edit->surname    = $request->input('surname');
-        $edit->slug       = SlugService::createSlug(User::class, 'slug', $var);
-        $edit->email      = $request->input('email');
-        if ($request->input('password') != null) {
-            $edit->password   = bcrypt($request->input('password'));
-        }
-        $edit->status     = $request->input('status');
+        $user->update([
+            'name' => $request->name,
+            'surname' => $request->surname,
+            'email' => $request->email,
+            'status' => 'ACTIVO',
+            'slug' => SlugService::createSlug(User::class, 'slug', $slug),
+            'password' => bcrypt($request->password)
+        ]);
+
+        $user->roles()->sync([$request->role]);
         /**
          * Update logo
          */
-        if ($request->file('avatar') != null) {
-            /**
-             * Delete current logo
-             */
-            File::delete(public_path('/uploads/users/', $edit->avatar));
-            /**
-             *
-             */
-            $file = $request->avatar;
-            $edit->avatar      = $edit->slug.'.'.$file->extension();
-            $file->move(public_path().'/uploads/users/', $edit->avatar);
-        }
-        /**
-         * Save changes
-         */
-        if($edit->save()) {
-            $role = Role::find($request->input('role'));
-            $edit->assignRole($role);
+        // if ($request->file('avatar') != null) {
+        //     /**
+        //      * Delete current logo
+        //      */
+        //     File::delete(public_path('/uploads/users/', $edit->avatar));
+        //     /**
+        //      *
+        //      */
+        //     $file = $request->avatar;
+        //     $edit->avatar      = $edit->slug.'.'.$file->extension();
+        //     $file->move(public_path().'/uploads/users/', $edit->avatar);
+        // }
 
-            return redirect('/'.$this->options['route'].'/'.$edit->id.'/edit')->withSuccess('Registro actualizado!!');
-        }
+        return redirect('/'.$this->options['route'].'/'.$user->id.'/edit')->withSuccess('Registro actualizado!!');
     }
     /**
      *

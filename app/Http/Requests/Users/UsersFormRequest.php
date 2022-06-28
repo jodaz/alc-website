@@ -26,17 +26,18 @@ class UsersFormRequest extends FormRequest
         $rules = [
             'name'      =>  'required|regex:/^[\pL\s\-]+$/u',
             'surname'   =>  'required|regex:/^[\pL\s\-]+$/u',
-            'status'    =>  'required'
-            ,
+            'role' => 'required',
+            'email' => 'required',
+            'password' => 'required'
         ];
 
-        if ($this->getMethod() == 'POST') {
-            $rules += [
-                'avatar'    =>  'required|image|mimes:jpg,jpeg,png,svg|max:2048',
-                'email'     =>  'email:rfc,dns|unique:users,email',
-                'role'      =>  'required'
-            ];
-        }
+        // if ($this->getMethod() == 'POST') {
+        //     $rules += [
+        //         'avatar'    =>  'required|image|mimes:jpg,jpeg,png,svg|max:2048',
+        //         'email'     =>  'email:rfc,dns|unique:users,email',
+        //         'role'      =>  'required'
+        //     ];
+        // }
 
         return $rules;
     }
@@ -48,8 +49,7 @@ class UsersFormRequest extends FormRequest
             'surname'   =>  'apellido',
             'email'     =>  'correo electrónico',
             'role'      =>  'rol',
-            'status'    =>  'estado',
-            'avatar'    =>  'imagen'
+            // 'avatar'    =>  'imagen'
         ];
     }
 
@@ -60,14 +60,15 @@ class UsersFormRequest extends FormRequest
             'name.regex'        =>  'Ingrese solo caracteres no númericos',
             'surname.required'  =>  'Ingrese el :attribute del usuario',
             'surname.regex'     =>  'Ingrese solo caracteres no númericos',
-            'email.email'       =>  'Ingrese un :attribute válido',
+            'email.required'   =>  'Ingrese un correo electrónico',
             'email.unique'      =>  'El attribute, debe ya se encuentra registrado',
             'role.required'     =>  'Seleccione el :attribute del usuario',
             'status.required'   =>  'Seleccione un :attribute',
-            'avatar.required'   =>  'Cargue una :attribute del usuario',
-            'avatar.image'      =>  'El archivo cargado debe ser de tipo :attribute',
-            'avatar.mime'       =>  'Cargue una :attribute con las extensiones validas para las mismas',
-            'avatar.max'        =>  'El tamaño máximo del archivo debe ser 2mb',
+            'password.required' => 'Ingrese una contraseña'
+            // 'avatar.required'   =>  'Cargue una :attribute del usuario',
+            // 'avatar.image'      =>  'El archivo cargado debe ser de tipo :attribute',
+            // 'avatar.mime'       =>  'Cargue una :attribute con las extensiones validas para las mismas',
+            // 'avatar.max'        =>  'El tamaño máximo del archivo debe ser 2mb',
         ];
     }
 }

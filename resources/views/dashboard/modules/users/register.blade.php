@@ -80,43 +80,20 @@
                             <div class="text text-danger">{{ $message }}</div>
                         @enderror
                     </div>
-                </div>
 
-                <div class="form-group row">
-                    <div class="col-lg-12">
-                        <label>Estado <span class="text-danger">*</span></label>
-                        <select class="form-control" name="status">
-                            <option value="">===== Seleccione =====</option>
-                            <option value="1" @if ((old('status') == '1') or (@$row['status']=='1') ) selected="selected" @endif>ACTIVO</option>
-                            <option value="0" @if ((old('status') == '0') or (@$row['status']=='0') ) selected="selected" @endif>INACTIVO</option>
-                        </select>
-
-                        @error('role')
-                            <div class="text text-danger">{{ $message }}</div>
-                        @enderror
-                    </div>
-                </div>
-
-                <div class="form-group row">
                     <div class="col-lg-6">
-                        <label>Imagen</label>
-                        <div class="custom-file">
-                            <input type="file" class="custom-file-input" name="avatar">
-                            <label class="custom-file-label" for="customFile"></label>
-                        </div>
+                        <label>Contraseña <span class="text-danger">*</span></label>
+                        {!! Form::password("password", [
+                            "Placeholder" => "Contraseña",
+                            "class" => "form-control",
+                            "type" => "password"
+                        ]) !!}
 
-                        @error('avatar')
+                        @error('password')
                             <div class="text text-danger">{{ $message }}</div>
                         @enderror
                     </div>
                 </div>
-                @if ($typeForm == "update")
-                    <div class="form-group row">
-                        <div class="col-lg-6">
-                            <img src="{{ asset('uploads/users/'.$row->avatar) }}" alt="">
-                        </div>
-                    </div>
-                @endif
             </div>
             <div class="kt-portlet__foot">
                 <div class="kt-form__actions">
