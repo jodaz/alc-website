@@ -14,6 +14,8 @@ use App\User;
 use DataTables;
 use Image;
 use File;
+use Illuminate\Support\Facades\Validator;
+use Illuminate\Validation\Rule;
 
 class UserController extends Controller
 {
@@ -132,18 +134,47 @@ class UserController extends Controller
      * User update
      *
      */
-    public function update(UsersFormRequest $request, User $user)
+    public function update(Request $request, User $user)
     {
+        $validator = Validator::make($request->all(), [
+            'name'      =>  'required|regex:/^[\pL\s\-]+$/u',
+            'surname'   =>  'required|regex:/^[\pL\s\-]+$/u',
+            'role' => 'required',
+            'email' => [
+                'required',
+                Rule::unique('users')->ignore($user->id),
+            ]
+        ], [
+            'name.required'     =>  'Ingrese el nombre',
+            'name.regex'        =>  'Ingrese solo caracteres no númericos',
+            'surname.required'  =>  'Ingrese el apellido',
+            'surname.regex'     =>  'Ingrese solo caracteres no númericos',
+            'email.required'   =>  'Ingrese un correo electrónico',
+            'email.unique'      =>  'El correo electrónico ya se encuentra registrado',
+            'role.required'     =>  'Seleccione el rol del usuario'
+        ]);
+
+        if ($validator->fails()) {
+            return redirect('/'.$this->options['route'].'/'.$user->id.'/edit')
+                ->withErrors($validator->errors());
+
+        }
+
         $slug = $request->input('name').' '.$request->input('surname');
 
-        $user->update([
+        $data = [
             'name' => $request->name,
             'surname' => $request->surname,
             'email' => $request->email,
             'status' => 'ACTIVO',
-            'slug' => SlugService::createSlug(User::class, 'slug', $slug),
-            'password' => bcrypt($request->password)
-        ]);
+            'slug' => SlugService::createSlug(User::class, 'slug', $slug)
+        ];
+
+        if ($request->password) {
+            $data->password = bcrypt($request->password);
+        }
+
+        $user->update($data);
 
         $user->roles()->sync([$request->role]);
         /**
@@ -162,7 +193,8 @@ class UserController extends Controller
         //     $file->move(public_path().'/uploads/users/', $edit->avatar);
         // }
 
-        return redirect('/'.$this->options['route'].'/'.$user->id.'/edit')->withSuccess('Registro actualizado!!');
+        return redirect('/'.$this->options['route'].'/'.$user->id.'/edit')
+            ->withSuccess('¡El usuario "'.$user->email.'" ha sido actualizado!');
     }
     /**
      *
