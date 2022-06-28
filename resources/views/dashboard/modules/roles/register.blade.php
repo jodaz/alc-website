@@ -38,28 +38,6 @@
                     @enderror
                 </div>
             </div>
-
-            <div class="row">
-                <div class="form-group col-md-12">
-                    <label class="control-label"> Permisos <span class="text-danger">*</span></label>
-                </div>
-            </div>
-            <div class="row">
-                @foreach($permissions as $value)
-                    <div class="form-group col-md-4">
-                        @if($typeForm == 'create')
-                            <label>{{ Form::checkbox('permission[]', $value->id, false, array('class' => 'name')) }}
-                            {{ $value->name }}</label>
-                        @else
-                            <label>{{ Form::checkbox('permission[]', $value->id, in_array($value->id, $rolePermissions) ? true : false, array('class' => 'name')) }}
-                            {{ $value->name }}</label>
-                        @endif
-                    </div>
-                    @error('permission')
-                        <div class="text text-danger">{{ $message }}</div>
-                    @enderror
-                @endforeach
-            </div>
         </div>
       <!-- /.card-body -->
       <div class="card-footer">

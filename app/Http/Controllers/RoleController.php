@@ -7,6 +7,8 @@ use Spatie\Permission\Models\Permission;
 use Spatie\Permission\Models\Role;
 use App\Http\Requests\Users\UsersFormRequest;
 use DataTables;
+use Illuminate\Support\Facades\Validator;
+use Illuminate\Validation\Rule;
 
 class RoleController extends Controller
 {
@@ -68,5 +70,28 @@ class RoleController extends Controller
             ->with('typeForm', 'update')
             ->with('permissions', Permission::get())
             ->with('row', $role);
+    }
+
+    public function update(Request $request, Role $role)
+    {
+        $validator = Validator::make($request->all(), [
+            'name' => [
+                'required',
+                Rule::unique('roles')->ignore($role->id),
+            ]
+        ], [
+            'name.required'   =>  'Ingrese un nombre',
+            'name.unique'      =>  'El nombre ya se encuentra registrado'
+        ]);
+
+        if ($validator->fails()) {
+            return redirect('/'.$this->options['route'].'/'.$role->id.'/edit')
+                ->withErrors($validator->errors());
+        }
+
+        $role->update($request->all());
+
+        return redirect('/'.$this->options['route'].'/'.$role->id.'/edit')
+            ->withSuccess('¡El rol "'.$role->name.'" ha sido actualizado!');
     }
 }
